@@ -32,29 +32,16 @@ export default function SiteHeader() {
           <span className="text-xs text-muted-foreground">
             Entenda o mundo pelos bastidores dos combates
           </span>
-          <Link href="/admin" className="text-xs text-primary hover:text-primary/80 transition-colors">
+          {/* <Link href="/admin" className="text-xs text-primary hover:text-primary/80 transition-colors">
             Painel Admin
-          </Link>
+          </Link> */}
         </div>
       </div>
 
       {/* Main header */}
       <div className="container">
         <div className="flex items-center justify-between py-3 gap-4">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 shrink-0">
-            <div className="w-9 h-9 rounded bg-primary flex items-center justify-center">
-              <Shield className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <div className="hidden sm:block">
-              <div className="font-bold text-lg leading-tight text-foreground">
-                Cenas de Combate
-              </div>
-              <div className="text-xs text-muted-foreground leading-tight">
-                História Militar
-              </div>
-            </div>
-          </Link>
+          
 
           {/* Theme toggle */}
           {toggleTheme && (
@@ -72,6 +59,21 @@ export default function SiteHeader() {
               )}
             </Button>
           )}
+
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-2 shrink-0">
+            {/* <div className="w-9 h-9 rounded bg-primary flex items-center justify-center">
+              <Shield className="w-5 h-5 text-primary-foreground" />
+            </div> */}
+            <div className="hidden sm:block">
+              <div className="font-bold text-lg leading-tight text-foreground">
+                Cenas de Combate
+              </div>
+              <div className="text-xs text-muted-foreground leading-tight">
+                História Militar
+              </div>
+            </div>
+          </Link>
 
           {/* Search */}
           <form onSubmit={handleSearch} className="flex-1 max-w-sm hidden md:flex">
