@@ -45,3 +45,11 @@
 - [x] Teste de logout (auth.logout.test.ts)
 - [x] 10/10 testes passando
 - [x] Checkpoint final
+
+
+## Tema Light (White)
+- [x] Paleta de cores light com CSS variables OKLCH
+- [x] Atualizar componentes para suportar ambos os temas
+- [x] Toggle de tema no header (dark/light) com ícones Sun/Moon
+- [x] Persistir preferência de tema no localStorage
+- [x] Testar tema light em todas as páginas

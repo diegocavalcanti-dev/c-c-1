@@ -1,14 +1,16 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { trpc } from "@/lib/trpc";
-import { Search, Menu, X, Shield } from "lucide-react";
+import { Search, Menu, X, Shield, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { useTheme } from "@/contexts/ThemeContext";
 
 export default function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [, navigate] = useLocation();
+  const { theme, toggleTheme } = useTheme();
 
   const { data: categories } = trpc.categories.list.useQuery();
 
@@ -53,6 +55,23 @@ export default function SiteHeader() {
               </div>
             </div>
           </Link>
+
+          {/* Theme toggle */}
+          {toggleTheme && (
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleTheme}
+              className="text-muted-foreground hover:text-foreground"
+              title={theme === "dark" ? "Ativar tema claro" : "Ativar tema escuro"}
+            >
+              {theme === "dark" ? (
+                <Sun className="w-4 h-4" />
+              ) : (
+                <Moon className="w-4 h-4" />
+              )}
+            </Button>
+          )}
 
           {/* Search */}
           <form onSubmit={handleSearch} className="flex-1 max-w-sm hidden md:flex">
