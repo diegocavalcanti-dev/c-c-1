@@ -13,9 +13,12 @@ export default function Home() {
   const { data: latestPosts, isLoading: loadingLatest } = trpc.posts.getLatest.useQuery({ limit: 18 });
   const { data: categories } = trpc.categories.list.useQuery();
 
-  const heroPost = featuredPosts?.[0];
-  const gridPosts = featuredPosts?.slice(1, 5) ?? [];
-  const sidebarPosts = latestPosts?.slice(0, 8) ?? [];
+  const featured = (featuredPosts as any)?.json ?? featuredPosts ?? [];
+  const latest = (latestPosts as any)?.json ?? latestPosts ?? [];
+
+  const heroPost = featured[0];
+  const gridPosts = featured.slice(1, 5);
+  const sidebarPosts = latest.slice(0, 8);  
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
