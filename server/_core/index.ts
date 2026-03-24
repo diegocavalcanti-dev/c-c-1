@@ -34,6 +34,8 @@ const server = createServer(app);
 const allowedOrigins = [
   "http://localhost:3000",
   "https://c-c-1.vercel.app",
+  "https://cenasdecombate.vercel.app",
+  "https://cenascombat-ytdtojuw.manus.space",
   "https://www.seu-dominio.com", // se tiver domínio customizado
 ];
 app.use(cors({
