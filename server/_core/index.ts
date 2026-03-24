@@ -7,6 +7,7 @@ import { registerOAuthRoutes } from "./oauth";
 import { appRouter } from "../routers";
 import { createContext } from "./context";
 import { serveStatic, setupVite } from "./vite";
+import cors from "cors";
 
 function isPortAvailable(port: number): Promise<boolean> {
   return new Promise(resolve => {
@@ -26,6 +27,30 @@ async function findAvailablePort(startPort: number = 3000): Promise<number> {
   }
   throw new Error(`No available port found starting from ${startPort}`);
 }
+
+const app = express();
+const server = createServer(app);
+
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://c-c-1.vercel.app",
+  "https://www.seu-dominio.com", // se tiver domínio customizado
+];
+app.use(cors({
+  origin: process.env.VITE_FRONTEND_URL || true, // URL da sua Vercel
+  credentials: true,
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization", "x-trpc-source"]
+}));
+
+app.use(express.json({ limit: "50mb" }));
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+    credentials: true,
+  })
+);
 
 async function startServer() {
   const app = express();

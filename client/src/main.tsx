@@ -37,9 +37,11 @@ queryClient.getMutationCache().subscribe(event => {
   }
 });
 
-const apiUrl =
-  import.meta.env.VITE_API_URL ||
-  (typeof window !== "undefined" ? window.location.origin : "");
+const apiUrl = import.meta.env.VITE_API_URL;
+
+if (!apiUrl) {
+  throw new Error("VITE_API_URL não configurada");
+}
 
 const trpcClient = trpc.createClient({
   links: [
@@ -47,7 +49,8 @@ const trpcClient = trpc.createClient({
       url: `${apiUrl}/api/trpc`,
       transformer: superjson,
       fetch(input, init) {
-        return fetch(input, init);
+        return fetch(input, {
+          ...(init ?? {}),
         });
       },
     }),
