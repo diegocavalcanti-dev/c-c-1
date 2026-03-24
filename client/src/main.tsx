@@ -37,10 +37,14 @@ queryClient.getMutationCache().subscribe(event => {
   }
 });
 
+const apiUrl =
+  import.meta.env.VITE_API_URL ||
+  (typeof window !== "undefined" ? window.location.origin : "");
+
 const trpcClient = trpc.createClient({
   links: [
     httpBatchLink({
-      url: `${import.meta.env.VITE_API_URL}/api/trpc`,
+      url: `${apiUrl}/api/trpc`,
       transformer: superjson,
       fetch(input, init) {
         return globalThis.fetch(input, {
