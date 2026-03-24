@@ -14,16 +14,21 @@ export default function SiteFooter() {
               <div className="w-8 h-8 rounded bg-primary flex items-center justify-center">
                 <Shield className="w-4 h-4 text-primary-foreground" />
               </div>
-              <span className="font-bold text-foreground">Cenas de Combate</span>
+              <span className="font-bold text-foreground">
+                Cenas de Combate
+              </span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Entenda o mundo pelos bastidores dos combates. História militar, geopolítica e conflitos contados com profundidade.
+              Entenda o mundo pelos bastidores dos combates. História militar,
+              geopolítica e conflitos contados com profundidade.
             </p>
           </div>
 
           {/* Quick links */}
           <div>
-            <h4 className="font-semibold text-foreground mb-3 text-sm uppercase tracking-wider">Categorias</h4>
+            <h4 className="font-semibold text-foreground mb-3 text-sm uppercase tracking-wider">
+              Categorias
+            </h4>
             <ul className="space-y-1.5">
               {[
                 { label: "Matérias", slug: "materias" },
@@ -31,9 +36,12 @@ export default function SiteFooter() {
                 { label: "Aviões", slug: "avioes" },
                 { label: "Tecnologia Militar", slug: "tecnologia-militar" },
                 { label: "Notícias", slug: "noticias" },
-              ].map((item) => (
+              ].map(item => (
                 <li key={item.slug}>
-                  <Link href={`/categoria/${item.slug}`} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <Link
+                    href={`/categoria/${item.slug}`}
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
                     {item.label}
                   </Link>
                 </li>
@@ -43,23 +51,31 @@ export default function SiteFooter() {
 
           {/* Info */}
           <div>
-            <h4 className="font-semibold text-foreground mb-3 text-sm uppercase tracking-wider">Site</h4>
+            <h4 className="font-semibold text-foreground mb-3 text-sm uppercase tracking-wider">
+              Site
+            </h4>
             <ul className="space-y-1.5">
               <li>
-                <Link href="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link
+                  href="/"
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
                   Início
                 </Link>
               </li>
               <li>
-                <Link href="/busca" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link
+                  href="/busca"
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
                   Buscar Artigos
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/admin" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Painel Admin
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
