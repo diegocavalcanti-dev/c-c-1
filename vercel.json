@@ -1,8 +1,16 @@
 {
+  "version": 2,
   "buildCommand": "pnpm install && pnpm build",
   "outputDirectory": "dist/public",
   "framework": "vite",
   "rewrites": [
-    { "source": "/((?!api).*)", "destination": "/index.html" }
+    {
+      "source": "/api/:path*",
+      "destination": "https://3000-i9bs5io4s1flpoup430za-117a2465.us2.manus.computer/api/:path*"
+    },
+    {
+      "source": "/((?!api ).*)",
+      "destination": "/index.html"
+    }
   ]
 }

@@ -37,11 +37,8 @@ queryClient.getMutationCache().subscribe(event => {
   }
 });
 
-const apiUrl = import.meta.env.VITE_API_URL;
-
-if (!apiUrl) {
-  throw new Error("VITE_API_URL não configurada");
-}
+// Ajuste crucial: Deixe a apiUrl vazia para usar o Proxy da Vercel
+const apiUrl = "";
 
 const trpcClient = trpc.createClient({
   links: [
@@ -50,7 +47,8 @@ const trpcClient = trpc.createClient({
       transformer: superjson,
       fetch(input, init) {
         return fetch(input, {
-          ...(init ?? {}),
+          ...init,
+          credentials: "include",
         });
       },
     }),
