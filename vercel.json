@@ -1,6 +1,6 @@
 {
   "buildCommand": "cd client && pnpm install && pnpm build",
-  "outputDirectory": "dist",
+  "outputDirectory": "client/dist",
   "framework": "vite",
   "rewrites": [
     {
@@ -8,3 +8,4 @@
       "destination": "/index.html"
     }
   ]
+}
