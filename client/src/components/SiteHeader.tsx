@@ -66,7 +66,7 @@ export default function SiteHeader() {
               <Shield className="w-5 h-5 text-primary-foreground" />
             </div> */}
             <div className="">
-              <div className="font-bold text-lg leading-tight text-foreground">
+              <div className="font-bold text-sm sm:text-lg leading-tight text-foreground">
                 Cenas de Combate
               </div>
               <div className="text-xs text-muted-foreground leading-tight hidden sm:block">
