@@ -37,7 +37,7 @@ async function startServer() {
   registerOAuthRoutes(app);
   // tRPC API
   app.use(
-    "/api/trpc",
+    url: `${import.meta.env.VITE_API_URL}/api/trpc`,
     createExpressMiddleware({
       router: appRouter,
       createContext,
