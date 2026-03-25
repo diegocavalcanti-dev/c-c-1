@@ -18,7 +18,7 @@ export default function AdBanner() {
 
   return (
     /* Container: Fundo cinza apenas no Mobile (até 768px), transparente no Desktop */
-    <div className="w-full flex flex-col items-center justify-center overflow-hidden my-6 bg-[#f7f7f7] md:bg-transparent py-4 md:py-0">
+    <div className="w-full flex flex-col items-center justify-center overflow-hidden my-6 bg-[#f7f7f7cb] md:bg-transparent py-4 md:py-0">
       {/* Rótulo "Publicidade" estilo portal (opcional, remova se não gostar) */}
       {/* <span className="text-[10px] text-muted-foreground uppercase tracking-widest mb-2 md:hidden">
         Publicidade

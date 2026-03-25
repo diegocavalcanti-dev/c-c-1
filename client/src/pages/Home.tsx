@@ -20,7 +20,7 @@ export default function Home() {
   const latest = (latestPosts as any)?.json ?? latestPosts ?? [];
 
   const heroPost = featured[0];
-  const gridPosts = featured.slice(1, 5);
+  const gridPosts = featured.slice(1, 6);
   const sidebarPosts = latest.slice(0, 8);
 
   return (
@@ -78,8 +78,8 @@ export default function Home() {
                       <p className="text-xs text-white/60 mt-2">
                         {heroPost.publishedAt
                           ? new Date(heroPost.publishedAt).toLocaleDateString(
-                              "pt-BR"
-                            )
+                            "pt-BR"
+                          )
                           : ""}
                       </p>
                     </div>
@@ -120,9 +120,8 @@ export default function Home() {
           </section>
         )} */}
 
-        <section className="container py-4">
-          <AdBanner />
-        </section>
+        {/* ADSENSE */}
+        <AdBanner />
 
         {/* Latest articles */}
         <section className="container py-8">
@@ -226,6 +225,6 @@ export default function Home() {
       </main>
 
       <SiteFooter />
-    </div>
+    </div >
   );
 }
