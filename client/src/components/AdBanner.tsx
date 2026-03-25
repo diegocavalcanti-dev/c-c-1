@@ -33,7 +33,7 @@ export default function AdBanner() {
               width: "100%",
               minWidth: "300px",
               /* Trava de altura: No mobile fica pequeno, no PC pode crescer um pouco */
-              height: "auto",
+              height: "250px",
               maxHeight: "280px",
             }}
             data-ad-client="ca-pub-9394428727340956"
