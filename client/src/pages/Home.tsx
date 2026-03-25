@@ -67,7 +67,7 @@ export default function Home() {
 
               {/* Side posts */}
               <div className="flex flex-col gap-3">
-                {gridPosts.map((post) => (
+                {gridPosts.map((post: any) => (
                   <PostCard key={post.id} post={post} variant="compact" />
                 ))}
               </div>
@@ -165,7 +165,7 @@ export default function Home() {
               <div className="bg-card border border-border rounded-lg p-4">
                 <h3 className="font-semibold text-sm text-foreground mb-3">Artigos Recentes</h3>
                 <div className="space-y-1">
-                  {sidebarPosts.map((post) => (
+                  {sidebarPosts.map((post: any) => (
                     <PostCard key={post.id} post={post} variant="compact" />
                   ))}
                 </div>
