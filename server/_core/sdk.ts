@@ -18,6 +18,16 @@ import type {
 const isNonEmptyString = (value: unknown): value is string =>
   typeof value === "string" && value.length > 0;
 
+const isDevAuthBypassEnabled = () =>
+  process.env.NODE_ENV === "development" &&
+  process.env.BYPASS_AUTH === "true";
+
+const getDevSession = (): SessionPayload => ({
+  openId: "local-admin",
+  appId: ENV.appId || "local-app",
+  name: "Diego Local Admin",
+});
+
 export type SessionPayload = {
   openId: string;
   appId: string;
@@ -201,9 +211,14 @@ class SDKServer {
     cookieValue: string | undefined | null
   ): Promise<{ openId: string; appId: string; name: string } | null> {
     if (!cookieValue) {
+      if (isDevAuthBypassEnabled()) {
+        console.warn("[Auth] BYPASS_AUTH enabled: using local dev session");
+        return getDevSession();
+      }
+
       console.warn("[Auth] Missing session cookie");
       return null;
-    }
+    } 
 
     try {
       const secretKey = this.getSessionSecret();
@@ -257,48 +272,65 @@ class SDKServer {
   }
 
   async authenticateRequest(req: Request): Promise<User> {
-    // Regular authentication flow
-    const cookies = this.parseCookies(req.headers.cookie);
-    const sessionCookie = cookies.get(COOKIE_NAME);
-    const session = await this.verifySession(sessionCookie);
+  const cookies = this.parseCookies(req.headers.cookie);
+  const sessionCookie = cookies.get(COOKIE_NAME);
+  const session = await this.verifySession(sessionCookie);
 
-    if (!session) {
-      throw ForbiddenError("Invalid session cookie");
-    }
+  if (!session) {
+    throw ForbiddenError("Invalid session cookie");
+  }
 
-    const sessionUserId = session.openId;
-    const signedInAt = new Date();
-    let user = await db.getUserByOpenId(sessionUserId);
+  const sessionUserId = session.openId;
+  const signedInAt = new Date();
+  let user = await db.getUserByOpenId(sessionUserId);
 
-    // If user not in DB, sync from OAuth server automatically
-    if (!user) {
-      try {
-        const userInfo = await this.getUserInfoWithJwt(sessionCookie ?? "");
-        await db.upsertUser({
-          openId: userInfo.openId,
-          name: userInfo.name || null,
-          email: userInfo.email ?? null,
-          loginMethod: userInfo.loginMethod ?? userInfo.platform ?? null,
-          lastSignedIn: signedInAt,
-        });
-        user = await db.getUserByOpenId(userInfo.openId);
-      } catch (error) {
-        console.error("[Auth] Failed to sync user from OAuth:", error);
-        throw ForbiddenError("Failed to sync user info");
-      }
-    }
-
-    if (!user) {
-      throw ForbiddenError("User not found");
-    }
-
+  if (!user && isDevAuthBypassEnabled()) {
     await db.upsertUser({
-      openId: user.openId,
+      openId: session.openId,
+      name: session.name,
+      email: "local-admin@example.com",
+      loginMethod: "dev-bypass",
+      role: "admin",
       lastSignedIn: signedInAt,
     });
 
-    return user;
+    user = await db.getUserByOpenId(session.openId);
   }
+
+  if (!user) {
+    try {
+      const userInfo = await this.getUserInfoWithJwt(sessionCookie ?? "");
+      await db.upsertUser({
+        openId: userInfo.openId,
+        name: userInfo.name || null,
+        email: userInfo.email ?? null,
+        loginMethod: userInfo.loginMethod ?? userInfo.platform ?? null,
+        lastSignedIn: signedInAt,
+      });
+      user = await db.getUserByOpenId(userInfo.openId);
+    } catch (error) {
+      console.error("[Auth] Failed to sync user from OAuth:", error);
+      throw ForbiddenError("Failed to sync user info");
+    }
+  }
+
+  if (!user) {
+    throw ForbiddenError("User not found");
+  }
+
+  await db.upsertUser({
+    openId: user.openId,
+    lastSignedIn: signedInAt,
+    ...(isDevAuthBypassEnabled() ? { role: "admin" as const } : {}),
+  });
+
+  const refreshedUser = await db.getUserByOpenId(user.openId);
+  if (!refreshedUser) {
+    throw ForbiddenError("User not found");
+  }
+
+  return refreshedUser;
+}
 }
 
 export const sdk = new SDKServer();
