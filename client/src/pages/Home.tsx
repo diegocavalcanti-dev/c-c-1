@@ -223,7 +223,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-
+      <AdBanner />
       <SiteFooter />
     </div >
   );
