@@ -1,23 +1,33 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 declare global {
-  interface Window {
-    adsbygoogle: unknown[];
+  interface window {
+    adsbygoogle: any[];
   }
 }
 
 export default function AdBanner() {
+  const initialized = useRef(false);
+
   useEffect(() => {
-    try {
-      window.adsbygoogle = window.adsbygoogle || [];
-      window.adsbygoogle.push({});
-    } catch (e) {
-      console.error("Erro ao carregar anúncio AdSense:", e);
+    // Evita disparar o anúncio duas vezes no mesmo componente
+    if (!initialized.current) {
+      try {
+        if (typeof window !== "undefined") {
+          (window.adsbygoogle = window.adsbygoogle || []).push({});
+          initialized.current = true;
+        }
+      } catch (e) {
+        console.error("Erro ao carregar anúncio AdSense:", e);
+      }
     }
   }, []);
 
   return (
-    <div className="w-full flex justify-center overflow-hidden">
+    <div
+      className="w-full flex justify-center overflow-hidden my-4"
+      style={{ minHeight: "100px" }} // Evita que o layout "pule" quando o anúncio carregar
+    >
       <ins
         className="adsbygoogle"
         style={{ display: "block", width: "100%" }}
