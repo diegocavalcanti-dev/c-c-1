@@ -123,7 +123,7 @@ export default defineConfig(async () => {
         hostname: 'https://www.cenasdecombate.com',
         dynamicRoutes: dynamicRoutes,
         generateRobotsTxt: true,
-        outDir: path.resolve(import.meta.dirname, "client", "public"),
+        outDir: path.resolve(import.meta.dirname, "dist/public"),
       }),
     ],
     resolve: {
