@@ -3,13 +3,6 @@
   "buildCommand": "pnpm install && pnpm build",
   "outputDirectory": "dist/public",
   "framework": "vite",
-  "redirects": [
-    {
-      "source": "/:slug((?!artigo$|api$|sobre$|contato$|politica-de-privacidade$|termos-de-uso$|robots\\.txt$|sitemap\\.xml$|sitemap_index\\.xml$|favicon\\.ico$).+)",
-      "destination": "/artigo/:slug",
-      "permanent": true
-    }
-  ],
   "rewrites": [
     {
       "source": "/api/:path*",
