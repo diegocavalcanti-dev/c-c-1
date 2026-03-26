@@ -33,7 +33,7 @@ export default function PostCard({ post, categories, variant = "default" }: Post
 
   if (variant === "compact") {
     return (
-      <Link href={`/artigo/${post.slug}`}>
+      <Link href={`/${post.slug}`}>
         <div className="flex gap-3 group cursor-pointer py-2 border-b border-border last:border-0">
           <div className="w-16 h-16 shrink-0 rounded overflow-hidden bg-muted">
             <img
@@ -56,7 +56,7 @@ export default function PostCard({ post, categories, variant = "default" }: Post
 
   if (variant === "featured") {
     return (
-      <Link href={`/artigo/${post.slug}`}>
+      <Link href={`/${post.slug}`}>
         <article className="group cursor-pointer relative overflow-hidden rounded-lg bg-card border border-border hover:border-primary/50 transition-all duration-300 h-full">
           <div className="aspect-video overflow-hidden">
             <img
@@ -102,7 +102,7 @@ export default function PostCard({ post, categories, variant = "default" }: Post
 
   // Default card
   return (
-    <Link href={`/artigo/${post.slug}`}>
+    <Link href={`/${post.slug}`}>
       <article className="group cursor-pointer flex gap-3 p-3 rounded-lg bg-card border border-border hover:border-primary/40 transition-all duration-200">
         <div className="w-24 h-20 shrink-0 rounded overflow-hidden bg-muted">
           <img

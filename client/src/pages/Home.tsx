@@ -44,7 +44,7 @@ export default function Home() {
               {/* Main hero post */}
               {heroPost && (
                 <Link
-                  href={`/artigo/${heroPost.slug}`}
+                  href={`/${heroPost.slug}`}
                   className="lg:col-span-2"
                 >
                   <article className="group cursor-pointer relative overflow-hidden rounded-lg bg-card border border-border hover:border-primary/50 transition-all duration-300 h-full">

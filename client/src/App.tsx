@@ -20,8 +20,8 @@ function Router() {
       {/* Public routes */}
       <Route path="/" component={Home} />
       <Route path="/categoria/:slug" component={ArticleList} />
-      <Route path="/artigo/:slug" component={ArticlePage} />
       <Route path="/busca" component={SearchPage} />
+      <Route path="/:slug" component={ArticlePage} />
 
       {/* Admin routes */}
       <Route path="/admin" component={AdminDashboard} />
