@@ -6,6 +6,7 @@ import PostCard from "@/components/PostCard";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Calendar, User, Eye, ChevronRight, Home } from "lucide-react";
+import AdBanner from "@/components/AdBanner";
 
 export default function ArticlePage() {
   const { slug } = useParams<{ slug: string }>();
@@ -54,13 +55,15 @@ export default function ArticlePage() {
 
   const publishedDate = post.publishedAt
     ? new Date(post.publishedAt).toLocaleDateString("pt-BR", {
-        day: "2-digit", month: "long", year: "numeric"
-      })
+      day: "2-digit", month: "long", year: "numeric"
+    })
     : "";
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <SiteHeader />
+      {/* ADSENSE */}
+      <AdBanner />
 
       <main className="flex-1">
         <div className="container py-6">

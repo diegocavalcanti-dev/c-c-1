@@ -7,6 +7,7 @@ import PostCard from "@/components/PostCard";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { ChevronLeft, ChevronRight, FolderOpen } from "lucide-react";
+import AdBanner from "@/components/AdBanner";
 
 const POSTS_PER_PAGE = 20;
 
@@ -30,6 +31,7 @@ export default function ArticleList() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <SiteHeader />
+      <AdBanner />
 
       <main className="flex-1 container py-8">
         {/* Category header */}

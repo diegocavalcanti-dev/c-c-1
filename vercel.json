@@ -3,6 +3,19 @@
   "buildCommand": "pnpm install && pnpm build",
   "outputDirectory": "dist/public",
   "framework": "vite",
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "cenasdecombate.vercel.app"
+        }
+      ],
+      "destination": "https://cenasdecombate.com",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/api/:path*",

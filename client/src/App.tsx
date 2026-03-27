@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "wouter";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
@@ -14,14 +16,33 @@ import AdminPostEditor from "./pages/admin/AdminPostEditor";
 import AdminCategories from "./pages/admin/AdminCategories";
 import AdminImport from "./pages/admin/AdminImport";
 
+// Componente para notificar o AdSense sobre mudanças de rota no SPA
+function AdSenseTrack() {
+  const [location] = useLocation();
+
+  useEffect(() => {
+    try {
+      // @ts-ignore
+      if (window.adsbygoogle) {
+        // @ts-ignore
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      }
+    } catch (e) {
+      // Ignora erros se o script ainda não tiver sido carregado pelo Google
+    }
+  }, [location]);
+
+  return null;
+}
+
 function Router() {
   return (
     <Switch>
       {/* Public routes */}
       <Route path="/" component={Home} />
       <Route path="/categoria/:slug" component={ArticleList} />
-      <Route path="/artigo/:slug" component={ArticlePage} />
       <Route path="/busca" component={SearchPage} />
+      <Route path="/:slug" component={ArticlePage} />
 
       {/* Admin routes */}
       <Route path="/admin" component={AdminDashboard} />
@@ -40,8 +61,10 @@ function Router() {
 function App() {
   return (
     <ErrorBoundary>
-      <ThemeProvider defaultTheme="dark" switchable>
+      <ThemeProvider defaultTheme="light" switchable>
         <TooltipProvider>
+          {/* O rastreador precisa estar aqui dentro para observar o Router */}
+          <AdSenseTrack />
           <Toaster />
           <Router />
         </TooltipProvider>
