@@ -1,9 +1,8 @@
 import { useEffect } from "react";
-import { useLocation } from "wouter";
+import { useLocation, Route, Switch } from "wouter";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
@@ -37,24 +36,27 @@ function AdSenseTrack() {
 
 function Router() {
   return (
-    <Switch>
-      {/* Public routes */}
-      <Route path="/" component={Home} />
-      <Route path="/categoria/:slug" component={ArticleList} />
-      <Route path="/busca" component={SearchPage} />
-      <Route path="/:slug" component={ArticlePage} />
+    <>
+      <AdSenseTrack />
+      <Switch>
+        {/* Public routes */}
+        <Route path="/" component={Home} />
+        <Route path="/categoria/:slug" component={ArticleList} />
+        <Route path="/busca" component={SearchPage} />
+        <Route path="/:slug" component={ArticlePage} />
 
-      {/* Admin routes */}
-      <Route path="/admin" component={AdminDashboard} />
-      <Route path="/admin/posts" component={AdminPosts} />
-      <Route path="/admin/posts/novo" component={AdminPostEditor} />
-      <Route path="/admin/posts/:id/editar" component={AdminPostEditor} />
-      <Route path="/admin/categorias" component={AdminCategories} />
-      <Route path="/admin/importar" component={AdminImport} />
+        {/* Admin routes */}
+        <Route path="/admin" component={AdminDashboard} />
+        <Route path="/admin/posts" component={AdminPosts} />
+        <Route path="/admin/posts/novo" component={AdminPostEditor} />
+        <Route path="/admin/posts/:id/editar" component={AdminPostEditor} />
+        <Route path="/admin/categorias" component={AdminCategories} />
+        <Route path="/admin/importar" component={AdminImport} />
 
-      <Route path="/404" component={NotFound} />
-      <Route component={NotFound} />
-    </Switch>
+        <Route path="/404" component={NotFound} />
+        <Route component={NotFound} />
+      </Switch>
+    </>
   );
 }
 
@@ -63,8 +65,6 @@ function App() {
     <ErrorBoundary>
       <ThemeProvider defaultTheme="light" switchable>
         <TooltipProvider>
-          {/* O rastreador precisa estar aqui dentro para observar o Router */}
-          <AdSenseTrack />
           <Toaster />
           <Router />
         </TooltipProvider>
