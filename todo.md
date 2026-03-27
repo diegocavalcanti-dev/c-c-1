@@ -53,3 +53,13 @@
 - [x] Toggle de tema no header (dark/light) com ícones Sun/Moon
 - [x] Persistir preferência de tema no localStorage
 - [x] Testar tema light em todas as páginas
+
+## CMS Profissional (Estilo WordPress)
+- [ ] Mudar padrão do tema para light (branco)
+- [ ] Dashboard CMS com sidebar estilo WordPress
+- [ ] Editor de artigos com rich text editor (TipTap)
+- [ ] Gerenciador de mídia/imagens com upload e galeria
+- [ ] Gerenciador de páginas
+- [ ] Gerenciador de categorias profissional
+- [ ] Sistema de rascunho/publicação/agendamento
+- [ ] Pré-visualização de artigos
