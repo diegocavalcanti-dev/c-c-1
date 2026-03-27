@@ -36,8 +36,7 @@ const allowedOrigins = [
   "https://c-c-1.vercel.app",
   "https://cenasdecombate.vercel.app",
   "https://cenascombat-ytdtojuw.manus.space",
-  "https://cenasdecombate.com",     
-  "https://www.cenasdecombate.com", 
+  "https://www.seu-dominio.com", // se tiver domínio customizado
 ];
 app.use(cors({
   origin: process.env.VITE_FRONTEND_URL || true, // URL da sua Vercel
