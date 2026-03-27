@@ -43,9 +43,8 @@ function Router() {
         <Route path="/" component={Home} />
         <Route path="/categoria/:slug" component={ArticleList} />
         <Route path="/busca" component={SearchPage} />
-        <Route path="/:slug" component={ArticlePage} />
 
-        {/* Admin routes */}
+        {/* Admin routes - IMPORTANTE: vêm antes da rota genérica */}
         <Route path="/admin" component={AdminDashboard} />
         <Route path="/admin/posts" component={AdminPosts} />
         <Route path="/admin/posts/novo" component={AdminPostEditor} />
@@ -53,6 +52,10 @@ function Router() {
         <Route path="/admin/categorias" component={AdminCategories} />
         <Route path="/admin/importar" component={AdminImport} />
 
+        {/* Article route - genérica, deve ser a última */}
+        <Route path="/:slug" component={ArticlePage} />
+
+        {/* 404 - sempre por último */}
         <Route path="/404" component={NotFound} />
         <Route component={NotFound} />
       </Switch>
