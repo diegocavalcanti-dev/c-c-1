@@ -1,0 +1,97 @@
+.tiptap-editor {
+  min-height: 400px;
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  outline: none;
+}
+
+.tiptap-editor h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 1em 0 0.5em 0;
+}
+
+.tiptap-editor h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0.83em 0 0.42em 0;
+}
+
+.tiptap-editor h3 {
+  font-size: 1.17em;
+  font-weight: bold;
+  margin: 0.67em 0 0.33em 0;
+}
+
+.tiptap-editor p {
+  margin: 1em 0;
+}
+
+.tiptap-editor ul,
+.tiptap-editor ol {
+  margin: 1em 0;
+  padding-left: 2em;
+}
+
+.tiptap-editor li {
+  margin: 0.5em 0;
+}
+
+.tiptap-editor blockquote {
+  border-left: 4px solid hsl(var(--primary));
+  margin: 1em 0;
+  padding-left: 1em;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+.tiptap-editor pre {
+  background: hsl(var(--muted));
+  border-radius: 0.5em;
+  padding: 1em;
+  overflow-x: auto;
+  margin: 1em 0;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+.tiptap-editor code {
+  background: hsl(var(--muted));
+  border-radius: 0.25em;
+  padding: 0.2em 0.4em;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+.tiptap-editor pre code {
+  background: none;
+  padding: 0;
+}
+
+.tiptap-editor a {
+  color: hsl(var(--primary));
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.tiptap-editor img {
+  max-width: 100%;
+  height: auto;
+  margin: 1em 0;
+  border-radius: 0.5em;
+}
+
+.tiptap-editor hr {
+  margin: 2em 0;
+  border: none;
+  border-top: 1px solid hsl(var(--border));
+}
+
+/* Placeholder */
+.tiptap-editor.is-empty::before {
+  content: attr(data-placeholder);
+  color: hsl(var(--muted-foreground));
+  pointer-events: none;
+  height: 0;
+}
