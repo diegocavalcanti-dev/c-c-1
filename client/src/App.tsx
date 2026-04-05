@@ -15,6 +15,7 @@ import AdminPostEditor from "./pages/admin/AdminPostEditor";
 import AdminCategories from "./pages/admin/AdminCategories";
 import AdminImport from "./pages/admin/AdminImport";
 import AdminMedia from "./pages/admin/AdminMedia";
+import AdminCMSPro from "./pages/admin/AdminCMSPro";
 
 // Componente para notificar o AdSense sobre mudanças de rota no SPA
 function AdSenseTrack() {
@@ -45,8 +46,9 @@ function Router() {
         <Route path="/categoria/:slug" component={ArticleList} />
         <Route path="/busca" component={SearchPage} />
 
-        {/* Admin routes - IMPORTANTE: vêm antes da rota genérica */}
-        <Route path="/admin" component={AdminDashboard} />
+        {/* Admin routes - IMPORTANTE: vém antes da rota genérica */}
+        <Route path="/admin" component={AdminCMSPro} />
+        <Route path="/admin/dashboard" component={AdminDashboard} />
         <Route path="/admin/posts" component={AdminPosts} />
         <Route path="/admin/posts/novo" component={AdminPostEditor} />
         <Route path="/admin/posts/:id/editar" component={AdminPostEditor} />

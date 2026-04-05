@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import TipTapEditor from "@/components/TipTapEditor";
 import {
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue
 } from "@/components/ui/select";
@@ -223,19 +224,18 @@ export default function AdminPostEditor() {
             {/* Content */}
             <div>
               <div className="flex items-center justify-between mb-1">
-                <Label className="text-xs text-muted-foreground">Conteúdo (HTML)</Label>
+                <Label className="text-xs text-muted-foreground">Conteúdo</Label>
               </div>
               {previewMode ? (
                 <div
-                  className="article-content bg-card border border-border rounded-lg p-4 min-h-64"
+                  className="article-content bg-card border border-border rounded-lg p-4 min-h-96 prose prose-sm dark:prose-invert"
                   dangerouslySetInnerHTML={{ __html: content }}
                 />
               ) : (
-                <Textarea
+                <TipTapEditor
                   value={content}
-                  onChange={(e) => setContent(e.target.value)}
-                  placeholder="Conteúdo do artigo em HTML..."
-                  className="min-h-96 font-mono text-sm bg-card border-border resize-y"
+                  onChange={setContent}
+                  placeholder="Escreva o conteúdo do seu artigo aqui..."
                 />
               )}
             </div>
