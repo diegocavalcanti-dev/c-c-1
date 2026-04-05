@@ -37,7 +37,6 @@ function AdSenseTrack() {
 
 function Router() {
   return (
-<<<<<<< Updated upstream
     <>
       <AdSenseTrack />
       <Switch>
@@ -53,6 +52,7 @@ function Router() {
         <Route path="/admin/posts/:id/editar" component={AdminPostEditor} />
         <Route path="/admin/categorias" component={AdminCategories} />
         <Route path="/admin/importar" component={AdminImport} />
+        <Route path="/admin/media" component={AdminMedia} />
 
         {/* Article route - genérica, deve ser a última */}
         <Route path="/:slug" component={ArticlePage} />
@@ -62,27 +62,6 @@ function Router() {
         <Route component={NotFound} />
       </Switch>
     </>
-=======
-    <Switch>
-      {/* Public routes */}
-      <Route path="/" component={Home} />
-      <Route path="/categoria/:slug" component={ArticleList} />
-      <Route path="/busca" component={SearchPage} />
-      <Route path="/:slug" component={ArticlePage} />
-
-      {/* Admin routes */}
-      <Route path="/admin" component={AdminDashboard} />
-      <Route path="/admin/posts" component={AdminPosts} />
-      <Route path="/admin/posts/novo" component={AdminPostEditor} />
-      <Route path="/admin/posts/:id/editar" component={AdminPostEditor} />
-      <Route path="/admin/categorias" component={AdminCategories} />
-      <Route path="/admin/importar" component={AdminImport} />
-      <Route path="/admin/media" component={AdminMedia} />
-
-      <Route path="/404" component={NotFound} />
-      <Route component={NotFound} />
-    </Switch>
->>>>>>> Stashed changes
   );
 }
 
