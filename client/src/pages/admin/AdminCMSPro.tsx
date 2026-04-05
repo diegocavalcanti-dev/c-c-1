@@ -27,13 +27,13 @@ export default function AdminCMSPro() {
   const [activeTab, setActiveTab] = useState("posts");
   const [searchQuery, setSearchQuery] = useState("");
 
-  const { data: posts, isLoading: loadingPosts } = trpc.cms.listPosts.useQuery({
+  const { data: posts = [], isLoading: loadingPosts } = trpc.cms.listPosts.useQuery({
     limit: 50,
     offset: 0,
   });
 
   const { data: stats } = trpc.cms.stats.useQuery();
-  const { data: categories } = trpc.categories.list.useQuery();
+  const { data: categories = [] } = trpc.categories.list.useQuery();
 
   const deletePostMutation = trpc.cms.deletePost.useMutation({
     onSuccess: () => {
@@ -50,7 +50,7 @@ export default function AdminCMSPro() {
     }
   };
 
-  const filteredPosts = posts?.filter(
+  const filteredPosts = (posts || []).filter(
     (post) =>
       post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       post.slug.toLowerCase().includes(searchQuery.toLowerCase())
