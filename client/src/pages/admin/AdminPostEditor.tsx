@@ -5,14 +5,15 @@ import { trpc } from "@/lib/trpc";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
+import { Textarea } from "@/components/ui/textarea"; // Mantido para o resumo
+import RichTextEditor from "@/components/RichTextEditor"; // Adicionado
 import {
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue
 } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { toast } from "sonner";
-import { Save, Eye, Upload, X, ArrowLeft, Image } from "lucide-react";
+import { Save, Eye, Upload, X, ArrowLeft } from "lucide-react";
 import { Link } from "wouter";
 
 function slugify(text: string): string {
@@ -223,7 +224,7 @@ export default function AdminPostEditor() {
             {/* Content */}
             <div>
               <div className="flex items-center justify-between mb-1">
-                <Label className="text-xs text-muted-foreground">Conteúdo (HTML)</Label>
+                <Label className="text-xs text-muted-foreground">Conteúdo</Label>
               </div>
               {previewMode ? (
                 <div
@@ -231,12 +232,7 @@ export default function AdminPostEditor() {
                   dangerouslySetInnerHTML={{ __html: content }}
                 />
               ) : (
-                <Textarea
-                  value={content}
-                  onChange={(e) => setContent(e.target.value)}
-                  placeholder="Conteúdo do artigo em HTML..."
-                  className="min-h-96 font-mono text-sm bg-card border-border resize-y"
-                />
+                <RichTextEditor value={content} onChange={setContent} />
               )}
             </div>
 
@@ -338,11 +334,10 @@ export default function AdminPostEditor() {
                   <Badge
                     key={cat.id}
                     variant={selectedCategoryIds.includes(cat.id) ? "default" : "outline"}
-                    className={`cursor-pointer text-xs transition-colors ${
-                      selectedCategoryIds.includes(cat.id)
+                    className={`cursor-pointer text-xs transition-colors ${selectedCategoryIds.includes(cat.id)
                         ? "bg-primary text-primary-foreground"
                         : "border-border text-muted-foreground hover:border-primary/50 hover:text-primary"
-                    }`}
+                      }`}
                     onClick={() => toggleCategory(cat.id)}
                   >
                     {cat.name}
