@@ -14,6 +14,7 @@ import AdminPosts from "./pages/admin/AdminPosts";
 import AdminPostEditor from "./pages/admin/AdminPostEditor";
 import AdminCategories from "./pages/admin/AdminCategories";
 import AdminImport from "./pages/admin/AdminImport";
+import AdminMedia from "./pages/admin/AdminMedia";
 
 // Componente para notificar o AdSense sobre mudanças de rota no SPA
 function AdSenseTrack() {
@@ -36,6 +37,7 @@ function AdSenseTrack() {
 
 function Router() {
   return (
+<<<<<<< Updated upstream
     <>
       <AdSenseTrack />
       <Switch>
@@ -60,6 +62,27 @@ function Router() {
         <Route component={NotFound} />
       </Switch>
     </>
+=======
+    <Switch>
+      {/* Public routes */}
+      <Route path="/" component={Home} />
+      <Route path="/categoria/:slug" component={ArticleList} />
+      <Route path="/busca" component={SearchPage} />
+      <Route path="/:slug" component={ArticlePage} />
+
+      {/* Admin routes */}
+      <Route path="/admin" component={AdminDashboard} />
+      <Route path="/admin/posts" component={AdminPosts} />
+      <Route path="/admin/posts/novo" component={AdminPostEditor} />
+      <Route path="/admin/posts/:id/editar" component={AdminPostEditor} />
+      <Route path="/admin/categorias" component={AdminCategories} />
+      <Route path="/admin/importar" component={AdminImport} />
+      <Route path="/admin/media" component={AdminMedia} />
+
+      <Route path="/404" component={NotFound} />
+      <Route component={NotFound} />
+    </Switch>
+>>>>>>> Stashed changes
   );
 }
 

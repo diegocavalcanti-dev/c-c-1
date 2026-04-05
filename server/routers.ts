@@ -238,6 +238,18 @@ export const appRouter = router({
         return { url };
       }),
 
+    listMedia: adminProcedure.query(async () => {
+      // TODO: Implementar query para listar mídia
+      return [];
+    }),
+
+    deleteMedia: adminProcedure
+      .input(z.object({ id: z.number() }))
+      .mutation(async ({ input }) => {
+        // TODO: Implementar delete de mídia
+        return { success: true };
+      }),
+
     // Bulk import from WordPress data
     importWordPress: adminProcedure
       .input(z.object({
