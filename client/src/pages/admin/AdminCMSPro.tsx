@@ -26,6 +26,7 @@ export default function AdminCMSPro() {
   const [, navigate] = useLocation();
   const [activeTab, setActiveTab] = useState("posts");
   const [searchQuery, setSearchQuery] = useState("");
+  // Force rebuild v2
 
   const { data: posts = [], isLoading: loadingPosts } = trpc.cms.listPosts.useQuery({
     limit: 50,
