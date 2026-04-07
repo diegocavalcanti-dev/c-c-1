@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useLocation } from "wouter";
 import { trpc } from "@/lib/trpc";
 import { Button } from "@/components/ui/button";
@@ -26,7 +26,7 @@ export default function AdminCMSPro() {
   const [, navigate] = useLocation();
   const [activeTab, setActiveTab] = useState("posts");
   const [searchQuery, setSearchQuery] = useState("");
-  // Force rebuild v2
+  // Force rebuild v3 - complete rebuild
 
   const { data: posts = [], isLoading: loadingPosts } = trpc.cms.listPosts.useQuery({
     limit: 50,
@@ -51,11 +51,14 @@ export default function AdminCMSPro() {
     }
   };
 
-  const filteredPosts = (posts || []).filter(
-    (post) =>
-      post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      post.slug.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const filteredPosts = useMemo(() => {
+    if (!Array.isArray(posts)) return [];
+    return posts.filter(
+      (post) =>
+        post?.title?.toLowerCase?.().includes(searchQuery.toLowerCase()) ||
+        post?.slug?.toLowerCase?.().includes(searchQuery.toLowerCase())
+    );
+  }, [posts, searchQuery]);
 
   const getStatusIcon = (status: string) => {
     switch (status) {
