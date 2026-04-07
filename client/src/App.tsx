@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import { useLocation, Route, Switch } from "wouter";
+import { Route, Switch } from "wouter";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
@@ -19,29 +18,9 @@ import AdminCMSPro from "./pages/admin/AdminCMSPro";
 import AdminDashboardPro from "./pages/admin/AdminDashboardPro";
 import AdminPostsListPro from "./pages/admin/AdminPostsListPro";
 
-// Componente para notificar o AdSense sobre mudanças de rota no SPA
-function AdSenseTrack() {
-  const [location] = useLocation();
-
-  useEffect(() => {
-    try {
-      // @ts-ignore
-      if (window.adsbygoogle) {
-        // @ts-ignore
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-      }
-    } catch (e) {
-      // Ignora erros se o script ainda não tiver sido carregado pelo Google
-    }
-  }, [location]);
-
-  return null;
-}
-
 function Router() {
   return (
     <>
-      <AdSenseTrack />
       <Switch>
         {/* Public routes */}
         <Route path="/" component={Home} />

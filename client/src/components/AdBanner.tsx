@@ -1,18 +1,15 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 export default function AdBanner() {
-  const initialized = useRef(false);
-
   useEffect(() => {
-    if (!initialized.current) {
-      try {
-        if (typeof window !== "undefined") {
-          (window.adsbygoogle = window.adsbygoogle || []).push({});
-          initialized.current = true;
-        }
-      } catch (e) {
-        console.error("Erro ao carregar anúncio AdSense:", e);
+    try {
+      if (typeof window !== "undefined" && window.adsbygoogle) {
+        // Processa apenas os anúncios que ainda não foram processados
+        window.adsbygoogle.push({});
       }
+    } catch (e) {
+      // Silencia erros se o anúncio já foi processado
+      // console.error("Erro ao carregar anúncio AdSense:", e);
     }
   }, []);
 
