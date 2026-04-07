@@ -172,18 +172,19 @@ export default function AdminPostsListPro() {
           sortKey={sortKey}
           sortDirection={sortDirection}
           loading={isLoading}
-          rowActions={(row) => {
-            const navigate = useRouter();
-            return (
-            <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition">
-              <Button
-                variant="ghost"
-                size="icon"
-                className="h-8 w-8 text-blue-600 hover:bg-blue-500/10"
-                onClick={() => navigate.push(`/admin/posts/${row.id}/editar`)}
-              >
-                <Edit className="w-4 h-4" />
-              </Button>
+          rowActions={(row) => (
+            <div className="flex items-center gap-2">
+              <Link href={`/admin/posts/${row.id}/editar`}>
+                <a>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="h-8 w-8 text-blue-600 hover:bg-blue-500/10"
+                  >
+                    <Edit className="w-4 h-4" />
+                  </Button>
+                </a>
+              </Link>
               <Button
                 variant="ghost"
                 size="icon"
@@ -197,8 +198,7 @@ export default function AdminPostsListPro() {
                 <Trash2 className="w-4 h-4" />
               </Button>
             </div>
-            );
-          }}
+          )}
           emptyState={
             <div className="text-center py-12">
               <p className="text-muted-foreground mb-4">Nenhum artigo encontrado</p>
