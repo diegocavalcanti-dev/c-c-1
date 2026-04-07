@@ -36,7 +36,7 @@ export default function AdminPostsListPro() {
     onError: (err) => toast.error(`Erro: ${err.message}`),
   });
 
-  const posts = postsData || [];
+  const posts = Array.isArray(postsData) ? postsData : (postsData?.posts || []);
   const filtered = posts.filter((post) => {
     const matchSearch =
       post.title.toLowerCase().includes(search.toLowerCase()) ||
