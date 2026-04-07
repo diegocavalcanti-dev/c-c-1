@@ -41,7 +41,7 @@ export default function AdminPostsListPro() {
     const matchSearch =
       post.title.toLowerCase().includes(search.toLowerCase()) ||
       post.author?.toLowerCase().includes(search.toLowerCase());
-    const matchStatus = !status || post.status === status;
+    const matchStatus = status === "all" || !status || post.status === status;
     return matchSearch && matchStatus;
   });
 
@@ -87,7 +87,7 @@ export default function AdminPostsListPro() {
               <SelectValue placeholder="Filtrar por status" />
             </SelectTrigger>
             <SelectContent className="bg-card border-border">
-              <SelectItem value="">Todos os status</SelectItem>
+              <SelectItem value="all">Todos os status</SelectItem>
               <SelectItem value="published">Publicado</SelectItem>
               <SelectItem value="draft">Rascunho</SelectItem>
               <SelectItem value="archived">Arquivado</SelectItem>
