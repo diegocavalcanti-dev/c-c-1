@@ -1,4 +1,4 @@
-import AdminLayoutPro from "@/components/AdminLayoutPro";
+import AdminLayoutPro from "@/components/admin/AdminLayoutPro";
 import MediaGallery from "@/components/MediaGallery";
 
 export default function AdminMedia() {

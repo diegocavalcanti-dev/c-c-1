@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import { toast } from "sonner";
 import { Plus, Edit, Trash2, FolderOpen } from "lucide-react";
+import AdminLayoutPro from "@/components/admin/AdminLayoutPro";
 
 function slugify(text: string): string {
   return text
@@ -102,7 +103,7 @@ export default function AdminCategories() {
   const isSaving = createMutation.isPending || updateMutation.isPending;
 
   return (
-    <AdminLayout title="Categorias">
+    <AdminLayoutPro title="Categorias">
       <div className="max-w-3xl">
         <div className="flex items-center justify-between mb-5">
           <p className="text-sm text-muted-foreground">
@@ -242,6 +243,6 @@ export default function AdminCategories() {
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
-    </AdminLayout>
+    </AdminLayoutPro>
   );
 }
