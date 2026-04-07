@@ -16,16 +16,15 @@ import { Link, useRouter } from "wouter";
 import { toast } from "sonner";
 
 export default function AdminPostsListPro() {
-  const [page, setPage] = useState(0);
   const [search, setSearch] = useState("");
   const [status, setStatus] = useState<string>("");
   const [sortKey, setSortKey] = useState<string>("createdAt");
   const [sortDirection, setSortDirection] = useState<"asc" | "desc">("desc");
 
-  const limit = 20;
+  // Carregar TODOS os artigos sem limite
   const { data: postsData, isLoading } = trpc.cms.listPosts.useQuery({
-    limit,
-    offset: page * limit,
+    limit: 10000, // Limite muito alto para carregar todos
+    offset: 0,
   });
 
   const deleteMutation = trpc.cms.deletePost.useMutation({
@@ -78,11 +77,10 @@ export default function AdminPostsListPro() {
             value={search}
             onChange={(e) => {
               setSearch(e.target.value);
-              setPage(0);
             }}
             className="bg-card border-border"
           />
-          <Select value={status} onValueChange={(v) => { setStatus(v); setPage(0); }}>
+          <Select value={status} onValueChange={(v) => { setStatus(v); }}>
             <SelectTrigger className="bg-card border-border">
               <SelectValue placeholder="Filtrar por status" />
             </SelectTrigger>
@@ -149,7 +147,20 @@ export default function AdminPostsListPro() {
               sortable: true,
               render: (value) => {
                 try {
-                  const date = new Date(typeof value === 'string' ? value : value * 1000);
+                  // Verificar se é timestamp em milissegundos (número grande) ou segundos
+                  let timestamp = value;
+                  if (typeof value === 'string') {
+                    timestamp = parseInt(value);
+                  }
+                  // Se for menor que 10 bilhões, é provavelmente em segundos
+                  if (timestamp < 10000000000) {
+                    timestamp = timestamp * 1000;
+                  }
+                  const date = new Date(timestamp);
+                  // Validar se a data é válida
+                  if (isNaN(date.getTime())) {
+                    return "Data inválida";
+                  }
                   return date.toLocaleDateString("pt-BR", {
                     year: "numeric",
                     month: "short",
@@ -158,7 +169,7 @@ export default function AdminPostsListPro() {
                 } catch {
                   return "Data inválida";
                 }
-              },
+              }
             },
             {
               key: "views" as const,
@@ -211,30 +222,7 @@ export default function AdminPostsListPro() {
           }
         />
 
-        {/* Pagination */}
-        <div className="flex items-center justify-between">
-          <p className="text-sm text-muted-foreground">
-            Página {page + 1} de {Math.ceil(posts.length / limit)}
-          </p>
-          <div className="flex gap-2">
-            <Button
-              variant="outline"
-              size="sm"
-              disabled={page === 0}
-              onClick={() => setPage(Math.max(0, page - 1))}
-            >
-              Anterior
-            </Button>
-            <Button
-              variant="outline"
-              size="sm"
-              disabled={page >= Math.ceil(posts.length / limit) - 1}
-              onClick={() => setPage(page + 1)}
-            >
-              Próxima
-            </Button>
-          </div>
-        </div>
+
       </div>
     </AdminLayoutPro>
   );
