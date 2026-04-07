@@ -12,7 +12,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Edit, Trash2, Eye, Plus } from "lucide-react";
-import { Link } from "wouter";
+import { Link, useRouter } from "wouter";
 import { toast } from "sonner";
 
 export default function AdminPostsListPro() {
@@ -147,12 +147,18 @@ export default function AdminPostsListPro() {
               label: "Data",
               width: "15%",
               sortable: true,
-              render: (value) =>
-                new Date(value).toLocaleDateString("pt-BR", {
-                  year: "numeric",
-                  month: "short",
-                  day: "numeric",
-                }),
+              render: (value) => {
+                try {
+                  const date = new Date(typeof value === 'string' ? value : value * 1000);
+                  return date.toLocaleDateString("pt-BR", {
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric",
+                  });
+                } catch {
+                  return "Data inválida";
+                }
+              },
             },
             {
               key: "views" as const,
@@ -166,19 +172,18 @@ export default function AdminPostsListPro() {
           sortKey={sortKey}
           sortDirection={sortDirection}
           loading={isLoading}
-          rowActions={(row) => (
+          rowActions={(row) => {
+            const navigate = useRouter();
+            return (
             <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition">
-              <Link href={`/admin/posts/${row.id}/editar`}>
-                <a>
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    className="h-8 w-8 text-blue-600 hover:bg-blue-500/10"
-                  >
-                    <Edit className="w-4 h-4" />
-                  </Button>
-                </a>
-              </Link>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="h-8 w-8 text-blue-600 hover:bg-blue-500/10"
+                onClick={() => navigate.push(`/admin/posts/${row.id}/editar`)}
+              >
+                <Edit className="w-4 h-4" />
+              </Button>
               <Button
                 variant="ghost"
                 size="icon"
@@ -192,7 +197,8 @@ export default function AdminPostsListPro() {
                 <Trash2 className="w-4 h-4" />
               </Button>
             </div>
-          )}
+            );
+          }}
           emptyState={
             <div className="text-center py-12">
               <p className="text-muted-foreground mb-4">Nenhum artigo encontrado</p>
