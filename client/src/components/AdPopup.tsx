@@ -52,9 +52,9 @@ export default function AdPopup() {
           </button>
 
           {/* Conteúdo do popup */}
-          <div className="p-6 pt-12">
+          <div className="p-4 sm:p-6 pt-12">
             {/* Anúncio */}
-            <div className="flex justify-center mb-4 bg-gray-100 rounded-lg p-4 min-h-[250px] flex items-center justify-center">
+            <div className="flex justify-center bg-gray-100 rounded-lg overflow-hidden" style={{ maxHeight: "280px" }}>
               <ins
                 className="adsbygoogle"
                 style={{
@@ -68,7 +68,6 @@ export default function AdPopup() {
                 data-full-width-responsive="true"
               />
             </div>
-            <p className="text-center text-sm text-gray-500">Anúncio</p>
           </div>
         </div>
       </div>
