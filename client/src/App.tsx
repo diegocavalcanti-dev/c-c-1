@@ -17,12 +17,8 @@ import AdminMedia from "./pages/admin/AdminMedia";
 import AdminCMSPro from "./pages/admin/AdminCMSPro";
 import AdminDashboardPro from "./pages/admin/AdminDashboardPro";
 import AdminPostsListPro from "./pages/admin/AdminPostsListPro";
-import { useGPTAds } from "@/hooks/useGPTAds";
 
 function Router() {
-  // Hook para recarregar anúncios GPT quando a rota muda (essencial para SPAs)
-  useGPTAds();
-
   return (
     <>
       <Switch>
