@@ -14,14 +14,16 @@ export default function AdPopup() {
     // Timer para mostrar popup após 20 segundos
     const timer = setTimeout(() => {
       setIsVisible(true);
-      // Recarregar anúncio quando popup aparece
-      try {
-        if (typeof window !== "undefined" && window.adsbygoogle) {
-          window.adsbygoogle.push({});
+      // Recarregar anúncio com delay para garantir que o DOM está pronto
+      setTimeout(() => {
+        try {
+          if (typeof window !== "undefined" && window.adsbygoogle) {
+            window.adsbygoogle.push({});
+          }
+        } catch (e) {
+          // Silencia erros
         }
-      } catch (e) {
-        // Silencia erros
-      }
+      }, 100);
     }, 20000); // 20 segundos
 
     return () => clearTimeout(timer);
@@ -52,7 +54,7 @@ export default function AdPopup() {
           {/* Conteúdo do popup */}
           <div className="p-6 pt-12">
             {/* Anúncio */}
-            <div className="flex justify-center mb-4">
+            <div className="flex justify-center mb-4 bg-gray-100 rounded-lg p-4 min-h-[250px] flex items-center justify-center">
               <ins
                 className="adsbygoogle"
                 style={{
@@ -66,6 +68,7 @@ export default function AdPopup() {
                 data-full-width-responsive="true"
               />
             </div>
+            <p className="text-center text-sm text-gray-500">Anúncio</p>
           </div>
         </div>
       </div>
