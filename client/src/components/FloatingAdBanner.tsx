@@ -37,19 +37,17 @@ export default function FloatingAdBanner() {
       <div className="w-full max-w-[728px] flex items-center justify-between gap-4">
         {/* Anúncio flutuante */}
         <div className="flex-1 flex justify-center">
-          <ins
-            className="adsbygoogle"
-            style={{
-              display: "block",
-              width: "100%",
-              maxWidth: "728px",
-              height: "90px",
-            }}
-            data-ad-client="ca-pub-9394428727340956"
-            data-ad-slot="8360438065"
-            data-ad-format="horizontal"
-            data-full-width-responsive="false"
-          />
+        <ins
+          className="adsbygoogle"
+          style={{
+            display: "block",
+            width: "100%",
+          }}
+          data-ad-client="ca-pub-9394428727340956"
+          data-ad-slot="5479994367"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        />
         </div>
 
         {/* Botão de fechar */}
