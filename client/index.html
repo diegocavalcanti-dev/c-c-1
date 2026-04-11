@@ -11,8 +11,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-9394428727340956" crossorigin="anonymous"></script>
+    <!-- Google Publisher Tag (GPT) - Melhor para SPAs -->
+    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+    <script>
+      window.googletag = window.googletag || {};
+      window.googletag.cmd = window.googletag.cmd || [];
+      window.googletag.cmd.push(function() {
+        googletag.defineSlot('/9394428727340956/cenas-de-combate-banner', [728, 90], 'div-gpt-ad-1').addService(googletag.pubads());
+        googletag.defineSlot('/9394428727340956/cenas-de-combate-rectangle', [300, 250], 'div-gpt-ad-2').addService(googletag.pubads());
+        googletag.pubads().enableSingleRequest();
+        googletag.pubads().collapseEmptyDivs();
+        googletag.enableServices();
+      });
+    </script>
     
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCNKGMJ6EV"></script>
