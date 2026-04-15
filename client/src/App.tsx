@@ -17,7 +17,7 @@ import AdminMedia from "./pages/admin/AdminMedia";
 import AdminCMSPro from "./pages/admin/AdminCMSPro";
 import AdminDashboardPro from "./pages/admin/AdminDashboardPro";
 import AdminPostsListPro from "./pages/admin/AdminPostsListPro";
-import AdPopup from "./components/AdPopup";
+// import AdPopup from "./components/AdPopup";
 
 
 function Router() {
@@ -57,7 +57,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Router />
-          <AdPopup />
+          {/* <AdPopup /> */}
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
