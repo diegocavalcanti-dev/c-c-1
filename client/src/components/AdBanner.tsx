@@ -1,30 +1,36 @@
 import { useEffect } from "react";
 import { useLocation } from "wouter";
 
+declare global {
+  interface Window {
+    adsbygoogle: any[];
+    gtag?: (...args: any[]) => void;
+  }
+}
+
 export default function AdBanner() {
   const [location] = useLocation();
 
   useEffect(() => {
     try {
-      if (typeof window !== "undefined" && window.adsbygoogle) {
-        // Processa os anúncios quando o componente monta ou a rota muda
-        window.adsbygoogle.push({});
-      }
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
     } catch (e) {
-      // Silencia erros se o anúncio já foi processado
-      // console.error("Erro ao carregar anúncio AdSense:", e);
+      console.error("AdSense error:", e);
     }
-  }, [location]); // Recarrega quando a rota muda
+  }, [location]);
 
   return (
-    /* Container: Fundo cinza apenas no Mobile (até 768px), transparente no Desktop */
-    <div className="w-full flex flex-col items-center justify-center overflow-hidden my-6 bg-[#f7f7f7cb] md:bg-transparent py-4 md:py-0">
+    <div
+      key={location}
+      className="w-full flex flex-col items-center justify-center my-6 bg-[#f7f7f7cb] md:bg-transparent py-4 md:py-0"
+    >
       <div className="w-full max-w-[1200px] flex justify-center">
         <ins
           className="adsbygoogle"
           style={{
             display: "block",
             width: "100%",
+            maxHeight: "300px",
           }}
           data-ad-client="ca-pub-9394428727340956"
           data-ad-slot="5479994367"
