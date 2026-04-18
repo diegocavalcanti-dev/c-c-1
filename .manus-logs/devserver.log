@@ -64,3 +64,22 @@
 [2026-04-18T16:30:54.542Z] HEAD / 200 in 41ms (next.js: 3ms, application-code: 38ms)
 [2026-04-18T16:30:55.477Z] GET /?from_webdev=1 200 in 59ms (next.js: 4ms, application-code: 55ms)
 [2026-04-18T16:32:27.147Z] ✓ Compiled in 128ms
+[2026-04-18T16:33:37.356Z] Error: Turbopack build failed with 1 errors:
+[2026-04-18T16:33:37.357Z] ./app
+[2026-04-18T16:33:37.358Z] Error: Next.js inferred your workspace root, but it may not be correct.
+[2026-04-18T16:33:37.358Z] We couldn't find the Next.js package (next/package.json) from the project directory: /home/ubuntu/cenasdecombate/app
+[2026-04-18T16:33:37.358Z] To fix this, set turbopack.root in your Next.js config, or ensure the Next.js package is resolvable from this directory.
+[2026-04-18T16:33:37.359Z] Note: For security and performance reasons, files outside of the project directory will not be compiled.
+[2026-04-18T16:33:37.359Z] See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+[2026-04-18T16:33:37.359Z] 
+[2026-04-18T16:33:37.359Z] at ignore-listed frames
+[2026-04-18T16:33:37.460Z] [?25h
+[2026-04-18T16:33:37.488Z] ELIFECYCLE  Command failed with exit code 1.
+[2026-04-18T16:33:37.514Z] Dev server exited with code 1
+[2026-04-18T16:36:12.726Z] Starting dev server with command: pnpm run dev
+[2026-04-18T16:36:13.597Z] 
+[2026-04-18T16:36:13.598Z] > cenasdecombate@1.0.0 dev /home/ubuntu/cenasdecombate
+[2026-04-18T16:36:13.598Z] > cross-env NODE_ENV=development tsx watch server/_core/index.ts
+[2026-04-18T16:36:13.598Z] 
+[2026-04-18T16:36:15.273Z] [OAuth] Initialized with baseURL: https://api.manus.im
+[2026-04-18T16:36:15.510Z] Server running on http://localhost:3000/
