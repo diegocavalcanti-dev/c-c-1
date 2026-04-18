@@ -1,0 +1,65 @@
+[2026-04-17T13:54:19.637Z] 9:54:19 AM [tsx] Process didn't exit in 5s. Force killing...
+[2026-04-17T15:35:02.223Z] Dev server process group stopped
+[2026-04-17T15:35:02.232Z] 11:35:02 AM [tsx] Previous process hasn't exited yet. Force killing...
+[2026-04-17T15:35:02.250Z] 11:35:02 AM [tsx] Previous process hasn't exited yet. Force killing...
+[2026-04-17T15:35:02.267Z] ELIFECYCLE  Command failed.
+[2026-04-17T15:35:04.224Z] Dev server process group force killed
+[2026-04-17T15:35:04.226Z] Dev server exited with code -15
+[2026-04-17T15:35:05.237Z] Starting dev server with command: pnpm run dev
+[2026-04-17T15:35:05.666Z] 
+[2026-04-17T15:35:05.667Z] > cenasdecombate@1.0.0 dev /home/ubuntu/cenasdecombate
+[2026-04-17T15:35:05.668Z] > next dev
+[2026-04-17T15:35:05.668Z] 
+[2026-04-17T15:35:06.275Z] ▲ Next.js 16.2.4 (Turbopack)
+[2026-04-17T15:35:06.276Z] - Local:         http://localhost:3000
+[2026-04-17T15:35:06.277Z] - Network:       http://169.254.0.21:3000
+[2026-04-17T15:35:06.277Z] - Environments: .env.local
+[2026-04-17T15:35:06.277Z] ✓ Ready in 479ms
+[2026-04-17T15:35:07.013Z] 
+[2026-04-17T15:35:11.600Z] GET / 200 in 3.1s (next.js: 2.8s, application-code: 234ms)
+[2026-04-17T15:35:12.094Z] ⚠ Blocked cross-origin request to Next.js dev resource /_next/webpack-hmr from "127.0.0.1".
+[2026-04-17T15:35:12.095Z] Cross-origin access to Next.js dev resources is blocked by default for safety.
+[2026-04-17T15:35:12.095Z] 
+[2026-04-17T15:35:12.095Z] To allow this host in development, add it to "allowedDevOrigins" in next.config.js and restart the dev server:
+[2026-04-17T15:35:12.096Z] 
+[2026-04-17T15:35:12.096Z] // next.config.js
+[2026-04-17T15:35:12.096Z] module.exports = {
+[2026-04-17T15:35:12.097Z] allowedDevOrigins: ['127.0.0.1'],
+[2026-04-17T15:35:12.097Z] }
+[2026-04-17T15:35:12.097Z] 
+[2026-04-17T15:35:12.097Z] Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+[2026-04-17T15:35:36.387Z] HEAD / 200 in 54ms (next.js: 5ms, application-code: 49ms)
+[2026-04-17T15:35:36.946Z] GET /?from_webdev=1 200 in 51ms (next.js: 4ms, application-code: 48ms)
+[2026-04-17T15:35:38.871Z] ⚠ Blocked cross-origin request to Next.js dev resource /_next/webpack-hmr from "3000-ikhgpp5wr78fex3bzzvj8-ad4a6251.us2.manus.computer".
+[2026-04-17T15:35:38.872Z] Cross-origin access to Next.js dev resources is blocked by default for safety.
+[2026-04-17T15:35:38.872Z] 
+[2026-04-17T15:35:38.872Z] To allow this host in development, add it to "allowedDevOrigins" in next.config.js and restart the dev server:
+[2026-04-17T15:35:38.873Z] 
+[2026-04-17T15:35:38.873Z] // next.config.js
+[2026-04-17T15:35:38.873Z] module.exports = {
+[2026-04-17T15:35:38.873Z] allowedDevOrigins: ['3000-ikhgpp5wr78fex3bzzvj8-ad4a6251.us2.manus.computer'],
+[2026-04-17T15:35:38.874Z] }
+[2026-04-17T15:35:38.874Z] 
+[2026-04-17T15:35:38.874Z] Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+[2026-04-17T15:35:39.056Z] GET /?from_webdev=1 200 in 63ms (next.js: 4ms, application-code: 59ms)
+[2026-04-17T17:56:55.800Z] HEAD / 200 in 518ms (next.js: 467ms, application-code: 51ms)
+[2026-04-17T17:56:56.523Z] GET /?from_webdev=1 200 in 59ms (next.js: 5ms, application-code: 54ms)
+[2026-04-17T17:56:59.209Z] GET /?from_webdev=1 200 in 60ms (next.js: 5ms, application-code: 55ms)
+[2026-04-18T13:23:02.484Z] HEAD / 200 in 101ms (next.js: 51ms, application-code: 50ms)
+[2026-04-18T13:23:03.248Z] GET /?from_webdev=1 200 in 58ms (next.js: 4ms, application-code: 54ms)
+[2026-04-18T13:23:09.435Z] GET /?from_webdev=1 200 in 48ms (next.js: 4ms, application-code: 44ms)
+[2026-04-18T13:40:41.935Z] GET /?from_webdev=1 200 in 51ms (next.js: 5ms, application-code: 47ms)
+[2026-04-18T13:40:42.810Z] HEAD / 200 in 38ms (next.js: 3ms, application-code: 35ms)
+[2026-04-18T13:40:43.357Z] GET /?from_webdev=1 200 in 43ms (next.js: 3ms, application-code: 40ms)
+[2026-04-18T13:40:44.282Z] GET /?from_webdev=1 200 in 41ms (next.js: 3ms, application-code: 38ms)
+[2026-04-18T14:30:08.221Z] GET /?from_webdev=1 200 in 46ms (next.js: 4ms, application-code: 42ms)
+[2026-04-18T14:30:09.468Z] HEAD / 200 in 33ms (next.js: 3ms, application-code: 31ms)
+[2026-04-18T14:30:10.380Z] GET /?from_webdev=1 200 in 46ms (next.js: 4ms, application-code: 42ms)
+[2026-04-18T14:30:11.272Z] GET /?from_webdev=1 200 in 53ms (next.js: 3ms, application-code: 50ms)
+[2026-04-18T15:16:54.395Z] GET /?from_webdev=1 200 in 54ms (next.js: 4ms, application-code: 50ms)
+[2026-04-18T15:16:55.753Z] HEAD / 200 in 39ms (next.js: 3ms, application-code: 36ms)
+[2026-04-18T15:16:56.291Z] GET /?from_webdev=1 200 in 47ms (next.js: 3ms, application-code: 44ms)
+[2026-04-18T15:16:57.240Z] GET /?from_webdev=1 200 in 58ms (next.js: 4ms, application-code: 55ms)
+[2026-04-18T16:30:49.213Z] GET /?from_webdev=1 200 in 66ms (next.js: 6ms, application-code: 60ms)
+[2026-04-18T16:30:54.542Z] HEAD / 200 in 41ms (next.js: 3ms, application-code: 38ms)
+[2026-04-18T16:30:55.477Z] GET /?from_webdev=1 200 in 59ms (next.js: 4ms, application-code: 55ms)
