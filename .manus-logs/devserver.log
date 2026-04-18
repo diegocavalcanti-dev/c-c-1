@@ -503,3 +503,325 @@
 [2026-04-18T16:40:19.435Z] c[OAuth] Initialized with baseURL: https://api.manus.im
 [2026-04-18T16:40:19.665Z] Port 3000 is busy, using port 3001 instead
 [2026-04-18T16:40:19.666Z] Server running on http://localhost:3001/
+[2026-04-18T16:49:41.032Z] Dev server process group stopped
+[2026-04-18T16:49:41.033Z] 12:49:41 PM [tsx] Previous process hasn't exited yet. Force killing...
+[2026-04-18T16:49:41.053Z] ELIFECYCLE  Command failed.
+[2026-04-18T16:49:41.067Z] Dev server exited with code -15
+[2026-04-18T16:49:44.044Z] Starting dev server with command: pnpm run dev
+[2026-04-18T16:49:44.818Z] 
+[2026-04-18T16:49:44.819Z] > cenasdecombate@1.0.0 dev /home/ubuntu/cenasdecombate
+[2026-04-18T16:49:44.819Z] > cross-env NODE_ENV=development tsx watch server/_core/index.ts
+[2026-04-18T16:49:44.820Z] 
+[2026-04-18T16:49:46.534Z] [OAuth] Initialized with baseURL: https://api.manus.im
+[2026-04-18T16:49:46.779Z] Server running on http://localhost:3000/
+[2026-04-18T16:49:48.486Z] Error: CORS blocked for origin: https://3000-ikhgpp5wr78fex3bzzvj8-ad4a6251.us2.manus.computer
+[2026-04-18T16:49:48.487Z] at origin (/home/ubuntu/cenasdecombate/server/_core/index.ts:82:25)
+[2026-04-18T16:49:48.487Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/cors@2.8.6/node_modules/cors/lib/index.js:219:13
+[2026-04-18T16:49:48.488Z] at optionsCallback (/home/ubuntu/cenasdecombate/node_modules/.pnpm/cors@2.8.6/node_modules/cors/lib/index.js:199:9)
+[2026-04-18T16:49:48.488Z] at corsMiddleware (/home/ubuntu/cenasdecombate/node_modules/.pnpm/cors@2.8.6/node_modules/cors/lib/index.js:204:7)
+[2026-04-18T16:49:48.488Z] at Layer.handle [as handle_request] (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/layer.js:95:5)
+[2026-04-18T16:49:48.489Z] at trim_prefix (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:328:13)
+[2026-04-18T16:49:48.489Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:286:9
+[2026-04-18T16:49:48.490Z] at Function.process_params (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:346:12)
+[2026-04-18T16:49:48.490Z] at next (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:280:10)
+[2026-04-18T16:49:48.490Z] at expressInit (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/middleware/init.js:40:5)
+[2026-04-18T16:49:48.491Z] at Layer.handle [as handle_request] (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/layer.js:95:5)
+[2026-04-18T16:49:48.491Z] at trim_prefix (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:328:13)
+[2026-04-18T16:49:48.491Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:286:9
+[2026-04-18T16:49:48.492Z] at Function.process_params (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:346:12)
+[2026-04-18T16:49:48.492Z] at next (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:280:10)
+[2026-04-18T16:49:48.492Z] at query (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/middleware/query.js:45:5)
+[2026-04-18T16:49:48.492Z] at Layer.handle [as handle_request] (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/layer.js:95:5)
+[2026-04-18T16:49:48.493Z] at trim_prefix (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:328:13)
+[2026-04-18T16:49:48.493Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:286:9
+[2026-04-18T16:49:48.493Z] at Function.process_params (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:346:12)
+[2026-04-18T16:49:48.494Z] at next (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:280:10)
+[2026-04-18T16:49:48.494Z] at Function.handle (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:175:3)
+[2026-04-18T16:49:48.494Z] at Function.handle (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/application.js:181:10)
+[2026-04-18T16:49:48.495Z] at Server.app (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/express.js:39:9)
+[2026-04-18T16:49:48.495Z] at Server.emit (node:events:524:28)
+[2026-04-18T16:49:48.495Z] at parserOnIncoming (node:_http_server:1153:12)
+[2026-04-18T16:49:48.496Z] at HTTPParser.parserOnHeadersComplete (node:_http_common:117:17)
+[2026-04-18T16:49:48.720Z] Error: CORS blocked for origin: https://3000-ikhgpp5wr78fex3bzzvj8-ad4a6251.us2.manus.computer
+[2026-04-18T16:49:48.721Z] at origin (/home/ubuntu/cenasdecombate/server/_core/index.ts:82:25)
+[2026-04-18T16:49:48.722Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/cors@2.8.6/node_modules/cors/lib/index.js:219:13
+[2026-04-18T16:49:48.722Z] at optionsCallback (/home/ubuntu/cenasdecombate/node_modules/.pnpm/cors@2.8.6/node_modules/cors/lib/index.js:199:9)
+[2026-04-18T16:49:48.722Z] at corsMiddleware (/home/ubuntu/cenasdecombate/node_modules/.pnpm/cors@2.8.6/node_modules/cors/lib/index.js:204:7)
+[2026-04-18T16:49:48.723Z] at Layer.handle [as handle_request] (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/layer.js:95:5)
+[2026-04-18T16:49:48.723Z] at trim_prefix (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:328:13)
+[2026-04-18T16:49:48.723Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:286:9
+[2026-04-18T16:49:48.724Z] at Function.process_params (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:346:12)
+[2026-04-18T16:49:48.724Z] at next (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:280:10)
+[2026-04-18T16:49:48.724Z] at expressInit (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/middleware/init.js:40:5)
+[2026-04-18T16:49:48.725Z] at Layer.handle [as handle_request] (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/layer.js:95:5)
+[2026-04-18T16:49:48.725Z] at trim_prefix (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:328:13)
+[2026-04-18T16:49:48.725Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:286:9
+[2026-04-18T16:49:48.726Z] at Function.process_params (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:346:12)
+[2026-04-18T16:49:48.726Z] at next (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:280:10)
+[2026-04-18T16:49:48.726Z] at query (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/middleware/query.js:45:5)
+[2026-04-18T16:49:48.726Z] at Layer.handle [as handle_request] (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/layer.js:95:5)
+[2026-04-18T16:49:48.727Z] at trim_prefix (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:328:13)
+[2026-04-18T16:49:48.727Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:286:9
+[2026-04-18T16:49:48.727Z] at Function.process_params (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:346:12)
+[2026-04-18T16:49:48.728Z] at next (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:280:10)
+[2026-04-18T16:49:48.728Z] at Function.handle (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:175:3)
+[2026-04-18T16:49:48.729Z] at Function.handle (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/application.js:181:10)
+[2026-04-18T16:49:48.729Z] at Server.app (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/express.js:39:9)
+[2026-04-18T16:49:48.729Z] at Server.emit (node:events:524:28)
+[2026-04-18T16:49:48.730Z] at parserOnIncoming (node:_http_server:1153:12)
+[2026-04-18T16:49:48.730Z] at HTTPParser.parserOnHeadersComplete (node:_http_common:117:17)
+[2026-04-18T16:49:49.369Z] Error: CORS blocked for origin: https://3000-ikhgpp5wr78fex3bzzvj8-ad4a6251.us2.manus.computer
+[2026-04-18T16:49:49.370Z] at origin (/home/ubuntu/cenasdecombate/server/_core/index.ts:82:25)
+[2026-04-18T16:49:49.370Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/cors@2.8.6/node_modules/cors/lib/index.js:219:13
+[2026-04-18T16:49:49.371Z] at optionsCallback (/home/ubuntu/cenasdecombate/node_modules/.pnpm/cors@2.8.6/node_modules/cors/lib/index.js:199:9)
+[2026-04-18T16:49:49.371Z] at corsMiddleware (/home/ubuntu/cenasdecombate/node_modules/.pnpm/cors@2.8.6/node_modules/cors/lib/index.js:204:7)
+[2026-04-18T16:49:49.371Z] at Layer.handle [as handle_request] (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/layer.js:95:5)
+[2026-04-18T16:49:49.372Z] at trim_prefix (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:328:13)
+[2026-04-18T16:49:49.372Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:286:9
+[2026-04-18T16:49:49.372Z] at Function.process_params (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:346:12)
+[2026-04-18T16:49:49.372Z] at next (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:280:10)
+[2026-04-18T16:49:49.373Z] at expressInit (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/middleware/init.js:40:5)
+[2026-04-18T16:49:49.373Z] at Layer.handle [as handle_request] (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/layer.js:95:5)
+[2026-04-18T16:49:49.373Z] at trim_prefix (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:328:13)
+[2026-04-18T16:49:49.374Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:286:9
+[2026-04-18T16:49:49.374Z] at Function.process_params (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:346:12)
+[2026-04-18T16:49:49.374Z] at next (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:280:10)
+[2026-04-18T16:49:49.375Z] at query (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/middleware/query.js:45:5)
+[2026-04-18T16:49:49.375Z] at Layer.handle [as handle_request] (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/layer.js:95:5)
+[2026-04-18T16:49:49.375Z] at trim_prefix (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:328:13)
+[2026-04-18T16:49:49.376Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:286:9
+[2026-04-18T16:49:49.376Z] at Function.process_params (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:346:12)
+[2026-04-18T16:49:49.376Z] at next (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:280:10)
+[2026-04-18T16:49:49.377Z] at Function.handle (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:175:3)
+[2026-04-18T16:49:49.377Z] at Function.handle (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/application.js:181:10)
+[2026-04-18T16:49:49.377Z] at Server.app (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/express.js:39:9)
+[2026-04-18T16:49:49.378Z] at Server.emit (node:events:524:28)
+[2026-04-18T16:49:49.378Z] at parserOnIncoming (node:_http_server:1153:12)
+[2026-04-18T16:49:49.378Z] at HTTPParser.parserOnHeadersComplete (node:_http_common:117:17)
+[2026-04-18T16:49:49.402Z] Error: CORS blocked for origin: https://3000-ikhgpp5wr78fex3bzzvj8-ad4a6251.us2.manus.computer
+[2026-04-18T16:49:49.403Z] at origin (/home/ubuntu/cenasdecombate/server/_core/index.ts:82:25)
+[2026-04-18T16:49:49.404Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/cors@2.8.6/node_modules/cors/lib/index.js:219:13
+[2026-04-18T16:49:49.404Z] at optionsCallback (/home/ubuntu/cenasdecombate/node_modules/.pnpm/cors@2.8.6/node_modules/cors/lib/index.js:199:9)
+[2026-04-18T16:49:49.404Z] at corsMiddleware (/home/ubuntu/cenasdecombate/node_modules/.pnpm/cors@2.8.6/node_modules/cors/lib/index.js:204:7)
+[2026-04-18T16:49:49.405Z] at Layer.handle [as handle_request] (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/layer.js:95:5)
+[2026-04-18T16:49:49.405Z] at trim_prefix (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:328:13)
+[2026-04-18T16:49:49.405Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:286:9
+[2026-04-18T16:49:49.406Z] at Function.process_params (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:346:12)
+[2026-04-18T16:49:49.406Z] at next (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:280:10)
+[2026-04-18T16:49:49.406Z] at expressInit (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/middleware/init.js:40:5)
+[2026-04-18T16:49:49.406Z] at Layer.handle [as handle_request] (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/layer.js:95:5)
+[2026-04-18T16:49:49.407Z] at trim_prefix (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:328:13)
+[2026-04-18T16:49:49.407Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:286:9
+[2026-04-18T16:49:49.407Z] at Function.process_params (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:346:12)
+[2026-04-18T16:49:49.408Z] at next (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:280:10)
+[2026-04-18T16:49:49.408Z] at query (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/middleware/query.js:45:5)
+[2026-04-18T16:49:49.408Z] at Layer.handle [as handle_request] (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/layer.js:95:5)
+[2026-04-18T16:49:49.409Z] at trim_prefix (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:328:13)
+[2026-04-18T16:49:49.409Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:286:9
+[2026-04-18T16:49:49.410Z] at Function.process_params (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:346:12)
+[2026-04-18T16:49:49.410Z] at next (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:280:10)
+[2026-04-18T16:49:49.410Z] at Function.handle (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:175:3)
+[2026-04-18T16:49:49.411Z] at Function.handle (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/application.js:181:10)
+[2026-04-18T16:49:49.411Z] at Server.app (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/express.js:39:9)
+[2026-04-18T16:49:49.411Z] at Server.emit (node:events:524:28)
+[2026-04-18T16:49:49.412Z] at parserOnIncoming (node:_http_server:1153:12)
+[2026-04-18T16:49:49.412Z] at HTTPParser.parserOnHeadersComplete (node:_http_common:117:17)
+[2026-04-18T16:49:49.532Z] Error: CORS blocked for origin: https://3000-ikhgpp5wr78fex3bzzvj8-ad4a6251.us2.manus.computer
+[2026-04-18T16:49:49.532Z] at origin (/home/ubuntu/cenasdecombate/server/_core/index.ts:82:25)
+[2026-04-18T16:49:49.533Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/cors@2.8.6/node_modules/cors/lib/index.js:219:13
+[2026-04-18T16:49:49.533Z] at optionsCallback (/home/ubuntu/cenasdecombate/node_modules/.pnpm/cors@2.8.6/node_modules/cors/lib/index.js:199:9)
+[2026-04-18T16:49:49.533Z] at corsMiddleware (/home/ubuntu/cenasdecombate/node_modules/.pnpm/cors@2.8.6/node_modules/cors/lib/index.js:204:7)
+[2026-04-18T16:49:49.534Z] at Layer.handle [as handle_request] (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/layer.js:95:5)
+[2026-04-18T16:49:49.534Z] at trim_prefix (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:328:13)
+[2026-04-18T16:49:49.535Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:286:9
+[2026-04-18T16:49:49.535Z] at Function.process_params (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:346:12)
+[2026-04-18T16:49:49.535Z] at next (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:280:10)
+[2026-04-18T16:49:49.536Z] at expressInit (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/middleware/init.js:40:5)
+[2026-04-18T16:49:49.536Z] at Layer.handle [as handle_request] (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/layer.js:95:5)
+[2026-04-18T16:49:49.536Z] at trim_prefix (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:328:13)
+[2026-04-18T16:49:49.537Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:286:9
+[2026-04-18T16:49:49.537Z] at Function.process_params (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:346:12)
+[2026-04-18T16:49:49.537Z] at next (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:280:10)
+[2026-04-18T16:49:49.538Z] at query (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/middleware/query.js:45:5)
+[2026-04-18T16:49:49.538Z] at Layer.handle [as handle_request] (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/layer.js:95:5)
+[2026-04-18T16:49:49.538Z] at trim_prefix (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:328:13)
+[2026-04-18T16:49:49.539Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:286:9
+[2026-04-18T16:49:49.539Z] at Function.process_params (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:346:12)
+[2026-04-18T16:49:49.539Z] at next (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:280:10)
+[2026-04-18T16:49:49.540Z] at Function.handle (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:175:3)
+[2026-04-18T16:49:49.540Z] at Function.handle (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/application.js:181:10)
+[2026-04-18T16:49:49.540Z] at Server.app (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/express.js:39:9)
+[2026-04-18T16:49:49.541Z] at Server.emit (node:events:524:28)
+[2026-04-18T16:49:49.541Z] at parserOnIncoming (node:_http_server:1153:12)
+[2026-04-18T16:49:49.541Z] at HTTPParser.parserOnHeadersComplete (node:_http_common:117:17)
+[2026-04-18T16:49:53.089Z] Error: CORS blocked for origin: https://3000-ikhgpp5wr78fex3bzzvj8-ad4a6251.us2.manus.computer
+[2026-04-18T16:49:53.090Z] at origin (/home/ubuntu/cenasdecombate/server/_core/index.ts:82:25)
+[2026-04-18T16:49:53.091Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/cors@2.8.6/node_modules/cors/lib/index.js:219:13
+[2026-04-18T16:49:53.091Z] at optionsCallback (/home/ubuntu/cenasdecombate/node_modules/.pnpm/cors@2.8.6/node_modules/cors/lib/index.js:199:9)
+[2026-04-18T16:49:53.092Z] at corsMiddleware (/home/ubuntu/cenasdecombate/node_modules/.pnpm/cors@2.8.6/node_modules/cors/lib/index.js:204:7)
+[2026-04-18T16:49:53.092Z] at Layer.handle [as handle_request] (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/layer.js:95:5)
+[2026-04-18T16:49:53.092Z] at trim_prefix (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:328:13)
+[2026-04-18T16:49:53.093Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:286:9
+[2026-04-18T16:49:53.093Z] at Function.process_params (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:346:12)
+[2026-04-18T16:49:53.094Z] at next (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:280:10)
+[2026-04-18T16:49:53.094Z] at expressInit (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/middleware/init.js:40:5)
+[2026-04-18T16:49:53.095Z] at Layer.handle [as handle_request] (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/layer.js:95:5)
+[2026-04-18T16:49:53.095Z] at trim_prefix (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:328:13)
+[2026-04-18T16:49:53.096Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:286:9
+[2026-04-18T16:49:53.096Z] at Function.process_params (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:346:12)
+[2026-04-18T16:49:53.097Z] at next (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:280:10)
+[2026-04-18T16:49:53.098Z] at query (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/middleware/query.js:45:5)
+[2026-04-18T16:49:53.098Z] at Layer.handle [as handle_request] (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/layer.js:95:5)
+[2026-04-18T16:49:53.099Z] at trim_prefix (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:328:13)
+[2026-04-18T16:49:53.099Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:286:9
+[2026-04-18T16:49:53.099Z] at Function.process_params (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:346:12)
+[2026-04-18T16:49:53.100Z] at next (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:280:10)
+[2026-04-18T16:49:53.100Z] at Function.handle (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:175:3)
+[2026-04-18T16:49:53.101Z] at Function.handle (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/application.js:181:10)
+[2026-04-18T16:49:53.101Z] at Server.app (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/express.js:39:9)
+[2026-04-18T16:49:53.102Z] at Server.emit (node:events:524:28)
+[2026-04-18T16:49:53.102Z] at parserOnIncoming (node:_http_server:1153:12)
+[2026-04-18T16:49:53.102Z] at HTTPParser.parserOnHeadersComplete (node:_http_common:117:17)
+[2026-04-18T16:49:56.334Z] Error: CORS blocked for origin: https://3000-ikhgpp5wr78fex3bzzvj8-ad4a6251.us2.manus.computer
+[2026-04-18T16:49:56.335Z] at origin (/home/ubuntu/cenasdecombate/server/_core/index.ts:82:25)
+[2026-04-18T16:49:56.335Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/cors@2.8.6/node_modules/cors/lib/index.js:219:13
+[2026-04-18T16:49:56.336Z] at optionsCallback (/home/ubuntu/cenasdecombate/node_modules/.pnpm/cors@2.8.6/node_modules/cors/lib/index.js:199:9)
+[2026-04-18T16:49:56.336Z] at corsMiddleware (/home/ubuntu/cenasdecombate/node_modules/.pnpm/cors@2.8.6/node_modules/cors/lib/index.js:204:7)
+[2026-04-18T16:49:56.336Z] at Layer.handle [as handle_request] (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/layer.js:95:5)
+[2026-04-18T16:49:56.336Z] at trim_prefix (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:328:13)
+[2026-04-18T16:49:56.337Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:286:9
+[2026-04-18T16:49:56.337Z] at Function.process_params (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:346:12)
+[2026-04-18T16:49:56.337Z] at next (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:280:10)
+[2026-04-18T16:49:56.338Z] at expressInit (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/middleware/init.js:40:5)
+[2026-04-18T16:49:56.338Z] at Layer.handle [as handle_request] (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/layer.js:95:5)
+[2026-04-18T16:49:56.338Z] at trim_prefix (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:328:13)
+[2026-04-18T16:49:56.339Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:286:9
+[2026-04-18T16:49:56.339Z] at Function.process_params (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:346:12)
+[2026-04-18T16:49:56.339Z] at next (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:280:10)
+[2026-04-18T16:49:56.340Z] at query (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/middleware/query.js:45:5)
+[2026-04-18T16:49:56.340Z] at Layer.handle [as handle_request] (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/layer.js:95:5)
+[2026-04-18T16:49:56.340Z] at trim_prefix (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:328:13)
+[2026-04-18T16:49:56.340Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:286:9
+[2026-04-18T16:49:56.341Z] at Function.process_params (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:346:12)
+[2026-04-18T16:49:56.341Z] at next (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:280:10)
+[2026-04-18T16:49:56.341Z] at Function.handle (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:175:3)
+[2026-04-18T16:49:56.342Z] at Function.handle (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/application.js:181:10)
+[2026-04-18T16:49:56.342Z] at Server.app (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/express.js:39:9)
+[2026-04-18T16:49:56.342Z] at Server.emit (node:events:524:28)
+[2026-04-18T16:49:56.343Z] at parserOnIncoming (node:_http_server:1153:12)
+[2026-04-18T16:49:56.343Z] at HTTPParser.parserOnHeadersComplete (node:_http_common:117:17)
+[2026-04-18T16:50:01.970Z] Error: CORS blocked for origin: https://3000-ikhgpp5wr78fex3bzzvj8-ad4a6251.us2.manus.computer
+[2026-04-18T16:50:01.971Z] at origin (/home/ubuntu/cenasdecombate/server/_core/index.ts:82:25)
+[2026-04-18T16:50:01.971Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/cors@2.8.6/node_modules/cors/lib/index.js:219:13
+[2026-04-18T16:50:01.971Z] at optionsCallback (/home/ubuntu/cenasdecombate/node_modules/.pnpm/cors@2.8.6/node_modules/cors/lib/index.js:199:9)
+[2026-04-18T16:50:01.972Z] at corsMiddleware (/home/ubuntu/cenasdecombate/node_modules/.pnpm/cors@2.8.6/node_modules/cors/lib/index.js:204:7)
+[2026-04-18T16:50:01.972Z] at Layer.handle [as handle_request] (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/layer.js:95:5)
+[2026-04-18T16:50:01.972Z] at trim_prefix (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:328:13)
+[2026-04-18T16:50:01.973Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:286:9
+[2026-04-18T16:50:01.973Z] at Function.process_params (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:346:12)
+[2026-04-18T16:50:01.973Z] at next (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:280:10)
+[2026-04-18T16:50:01.973Z] at expressInit (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/middleware/init.js:40:5)
+[2026-04-18T16:50:01.974Z] at Layer.handle [as handle_request] (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/layer.js:95:5)
+[2026-04-18T16:50:01.975Z] at trim_prefix (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:328:13)
+[2026-04-18T16:50:01.976Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:286:9
+[2026-04-18T16:50:01.976Z] at Function.process_params (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:346:12)
+[2026-04-18T16:50:01.977Z] at next (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:280:10)
+[2026-04-18T16:50:01.978Z] at query (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/middleware/query.js:45:5)
+[2026-04-18T16:50:01.978Z] at Layer.handle [as handle_request] (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/layer.js:95:5)
+[2026-04-18T16:50:01.979Z] at trim_prefix (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:328:13)
+[2026-04-18T16:50:01.979Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:286:9
+[2026-04-18T16:50:01.980Z] at Function.process_params (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:346:12)
+[2026-04-18T16:50:01.980Z] at next (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:280:10)
+[2026-04-18T16:50:01.981Z] at Function.handle (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:175:3)
+[2026-04-18T16:50:01.981Z] at Function.handle (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/application.js:181:10)
+[2026-04-18T16:50:01.982Z] at Server.app (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/express.js:39:9)
+[2026-04-18T16:50:01.983Z] at Server.emit (node:events:524:28)
+[2026-04-18T16:50:01.983Z] at parserOnIncoming (node:_http_server:1153:12)
+[2026-04-18T16:50:01.984Z] at HTTPParser.parserOnHeadersComplete (node:_http_common:117:17)
+[2026-04-18T16:50:02.305Z] Error: CORS blocked for origin: https://3000-ikhgpp5wr78fex3bzzvj8-ad4a6251.us2.manus.computer
+[2026-04-18T16:50:02.305Z] at origin (/home/ubuntu/cenasdecombate/server/_core/index.ts:82:25)
+[2026-04-18T16:50:02.306Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/cors@2.8.6/node_modules/cors/lib/index.js:219:13
+[2026-04-18T16:50:02.306Z] at optionsCallback (/home/ubuntu/cenasdecombate/node_modules/.pnpm/cors@2.8.6/node_modules/cors/lib/index.js:199:9)
+[2026-04-18T16:50:02.306Z] at corsMiddleware (/home/ubuntu/cenasdecombate/node_modules/.pnpm/cors@2.8.6/node_modules/cors/lib/index.js:204:7)
+[2026-04-18T16:50:02.307Z] at Layer.handle [as handle_request] (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/layer.js:95:5)
+[2026-04-18T16:50:02.307Z] at trim_prefix (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:328:13)
+[2026-04-18T16:50:02.307Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:286:9
+[2026-04-18T16:50:02.308Z] at Function.process_params (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:346:12)
+[2026-04-18T16:50:02.308Z] at next (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:280:10)
+[2026-04-18T16:50:02.308Z] at expressInit (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/middleware/init.js:40:5)
+[2026-04-18T16:50:02.309Z] at Layer.handle [as handle_request] (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/layer.js:95:5)
+[2026-04-18T16:50:02.309Z] at trim_prefix (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:328:13)
+[2026-04-18T16:50:02.309Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:286:9
+[2026-04-18T16:50:02.309Z] at Function.process_params (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:346:12)
+[2026-04-18T16:50:02.310Z] at next (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:280:10)
+[2026-04-18T16:50:02.310Z] at query (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/middleware/query.js:45:5)
+[2026-04-18T16:50:02.310Z] at Layer.handle [as handle_request] (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/layer.js:95:5)
+[2026-04-18T16:50:02.311Z] at trim_prefix (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:328:13)
+[2026-04-18T16:50:02.311Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:286:9
+[2026-04-18T16:50:02.311Z] at Function.process_params (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:346:12)
+[2026-04-18T16:50:02.312Z] at next (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:280:10)
+[2026-04-18T16:50:02.312Z] at Function.handle (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:175:3)
+[2026-04-18T16:50:02.312Z] at Function.handle (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/application.js:181:10)
+[2026-04-18T16:50:02.313Z] at Server.app (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/express.js:39:9)
+[2026-04-18T16:50:02.313Z] at Server.emit (node:events:524:28)
+[2026-04-18T16:50:02.314Z] at parserOnIncoming (node:_http_server:1153:12)
+[2026-04-18T16:50:02.314Z] at HTTPParser.parserOnHeadersComplete (node:_http_common:117:17)
+[2026-04-18T16:50:02.315Z] Error: CORS blocked for origin: https://3000-ikhgpp5wr78fex3bzzvj8-ad4a6251.us2.manus.computer
+[2026-04-18T16:50:02.315Z] at origin (/home/ubuntu/cenasdecombate/server/_core/index.ts:82:25)
+[2026-04-18T16:50:02.316Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/cors@2.8.6/node_modules/cors/lib/index.js:219:13
+[2026-04-18T16:50:02.316Z] at optionsCallback (/home/ubuntu/cenasdecombate/node_modules/.pnpm/cors@2.8.6/node_modules/cors/lib/index.js:199:9)
+[2026-04-18T16:50:02.316Z] at corsMiddleware (/home/ubuntu/cenasdecombate/node_modules/.pnpm/cors@2.8.6/node_modules/cors/lib/index.js:204:7)
+[2026-04-18T16:50:02.317Z] at Layer.handle [as handle_request] (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/layer.js:95:5)
+[2026-04-18T16:50:02.317Z] at trim_prefix (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:328:13)
+[2026-04-18T16:50:02.318Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:286:9
+[2026-04-18T16:50:02.318Z] at Function.process_params (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:346:12)
+[2026-04-18T16:50:02.318Z] at next (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:280:10)
+[2026-04-18T16:50:02.319Z] at expressInit (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/middleware/init.js:40:5)
+[2026-04-18T16:50:02.319Z] at Layer.handle [as handle_request] (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/layer.js:95:5)
+[2026-04-18T16:50:02.319Z] at trim_prefix (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:328:13)
+[2026-04-18T16:50:02.320Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:286:9
+[2026-04-18T16:50:02.320Z] at Function.process_params (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:346:12)
+[2026-04-18T16:50:02.320Z] at next (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:280:10)
+[2026-04-18T16:50:02.320Z] at query (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/middleware/query.js:45:5)
+[2026-04-18T16:50:02.321Z] at Layer.handle [as handle_request] (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/layer.js:95:5)
+[2026-04-18T16:50:02.321Z] at trim_prefix (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:328:13)
+[2026-04-18T16:50:02.321Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:286:9
+[2026-04-18T16:50:02.322Z] at Function.process_params (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:346:12)
+[2026-04-18T16:50:02.322Z] at next (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:280:10)
+[2026-04-18T16:50:02.322Z] at Function.handle (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:175:3)
+[2026-04-18T16:50:02.323Z] at Function.handle (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/application.js:181:10)
+[2026-04-18T16:50:02.323Z] at Server.app (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/express.js:39:9)
+[2026-04-18T16:50:02.323Z] at Server.emit (node:events:524:28)
+[2026-04-18T16:50:02.323Z] at parserOnIncoming (node:_http_server:1153:12)
+[2026-04-18T16:50:02.324Z] at HTTPParser.parserOnHeadersComplete (node:_http_common:117:17)
+[2026-04-18T16:50:05.335Z] Error: CORS blocked for origin: https://3000-ikhgpp5wr78fex3bzzvj8-ad4a6251.us2.manus.computer
+[2026-04-18T16:50:05.336Z] at origin (/home/ubuntu/cenasdecombate/server/_core/index.ts:82:25)
+[2026-04-18T16:50:05.336Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/cors@2.8.6/node_modules/cors/lib/index.js:219:13
+[2026-04-18T16:50:05.336Z] at optionsCallback (/home/ubuntu/cenasdecombate/node_modules/.pnpm/cors@2.8.6/node_modules/cors/lib/index.js:199:9)
+[2026-04-18T16:50:05.337Z] at corsMiddleware (/home/ubuntu/cenasdecombate/node_modules/.pnpm/cors@2.8.6/node_modules/cors/lib/index.js:204:7)
+[2026-04-18T16:50:05.337Z] at Layer.handle [as handle_request] (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/layer.js:95:5)
+[2026-04-18T16:50:05.337Z] at trim_prefix (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:328:13)
+[2026-04-18T16:50:05.338Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:286:9
+[2026-04-18T16:50:05.338Z] at Function.process_params (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:346:12)
+[2026-04-18T16:50:05.339Z] at next (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:280:10)
+[2026-04-18T16:50:05.339Z] at expressInit (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/middleware/init.js:40:5)
+[2026-04-18T16:50:05.339Z] at Layer.handle [as handle_request] (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/layer.js:95:5)
+[2026-04-18T16:50:05.340Z] at trim_prefix (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:328:13)
+[2026-04-18T16:50:05.340Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:286:9
+[2026-04-18T16:50:05.340Z] at Function.process_params (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:346:12)
+[2026-04-18T16:50:05.341Z] at next (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:280:10)
+[2026-04-18T16:50:05.341Z] at query (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/middleware/query.js:45:5)
+[2026-04-18T16:50:05.341Z] at Layer.handle [as handle_request] (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/layer.js:95:5)
+[2026-04-18T16:50:05.342Z] at trim_prefix (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:328:13)
+[2026-04-18T16:50:05.342Z] at /home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:286:9
+[2026-04-18T16:50:05.342Z] at Function.process_params (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:346:12)
+[2026-04-18T16:50:05.343Z] at next (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:280:10)
+[2026-04-18T16:50:05.343Z] at Function.handle (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/router/index.js:175:3)
+[2026-04-18T16:50:05.343Z] at Function.handle (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/application.js:181:10)
+[2026-04-18T16:50:05.344Z] at Server.app (/home/ubuntu/cenasdecombate/node_modules/.pnpm/express@4.22.1/node_modules/express/lib/express.js:39:9)
+[2026-04-18T16:50:05.344Z] at Server.emit (node:events:524:28)
+[2026-04-18T16:50:05.344Z] at parserOnIncoming (node:_http_server:1153:12)
+[2026-04-18T16:50:05.345Z] at HTTPParser.parserOnHeadersComplete (node:_http_common:117:17)
+[2026-04-18T16:52:58.479Z] 12:52:58 PM [tsx] change in ./server/_core/vite.ts Restarting...
+[2026-04-18T16:53:00.537Z] c[OAuth] Initialized with baseURL: https://api.manus.im
+[2026-04-18T16:53:00.832Z] Server running on http://localhost:3000/
