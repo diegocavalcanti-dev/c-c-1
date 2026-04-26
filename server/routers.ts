@@ -10,7 +10,10 @@ import {
   getPublishedPosts, getPostBySlug, getPostById, getPostCategories, incrementViewCount,
   createPost, updatePost, deletePost, getAllPostsAdmin, getPostStats,
   bulkInsertCategories, bulkInsertPosts, createMedia, getAllMedia, deleteMedia as deleteMediaDb,
+<<<<<<< HEAD
   getAllAuthors, getAuthorBySlug, getAuthorById, createAuthor, updateAuthor, deleteAuthor, getAuthorPosts,
+=======
+>>>>>>> 8afa88b (config new project)
 } from "./db";
 import { storagePut } from "./storage";
 import { nanoid } from "nanoid";

@@ -17,9 +17,6 @@ import AdminMedia from "./pages/admin/AdminMedia";
 import AdminCMSPro from "./pages/admin/AdminCMSPro";
 import AdminDashboardPro from "./pages/admin/AdminDashboardPro";
 import AdminPostsListPro from "./pages/admin/AdminPostsListPro";
-import AdminAuthors from "./pages/admin/AdminAuthors";
-import AuthorsListPage from "./pages/AuthorsListPage";
-import AuthorPage from "./pages/AuthorPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
@@ -55,7 +52,7 @@ function Router() {
         <Route path="/admin/importar" component={AdminImport} />
         <Route path="/admin/media" component={AdminMedia} />
 
-        
+
         {/* Article route - genérica, deve ser a última */}
         <Route path="/:slug" component={ArticlePage} />
 
