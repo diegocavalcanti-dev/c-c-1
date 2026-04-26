@@ -53,3 +53,36 @@
 - [x] Toggle de tema no header (dark/light) com ícones Sun/Moon
 - [x] Persistir preferência de tema no localStorage
 - [x] Testar tema light em todas as páginas
+
+
+## Sincronização GitHub e Preview Social
+- [x] Sincronizar atualizações do GitHub
+- [x] Criar rota GET /api/public/post-meta/:slug
+- [x] Configurar env SITE_URL como https://cenasdecombate.com
+- [x] Testar rota de preview social
+
+## Editor de Artigos - Campo Published Date
+- [x] Adicionar campo `publishedAt` ao schema Drizzle
+- [x] Atualizar AdminPostEditor.tsx com input de data publicação
+- [x] Integrar handleSave para enviar publishedAt ao backend
+- [x] Atualizar procedures tRPC (createPost, updatePost) para aceitar publishedAt
+- [x] Implementar lógica: se status=published sem publishedAt, usar data atual
+- [x] Implementar lógica: se status=draft, publishedAt fica null
+- [x] Testes vitest para validar publishedAt (5 testes)
+- [x] Todos os 26 testes passando
+
+
+## Bugs a Corrigir - Publicação de Artigos
+- [x] Data desaparecendo após reload do editor (serialização/timezone)
+- [x] Data com diferença de 1 dia (UTC vs local timezone)
+- [x] Editor HTML não sincronizando visual com conteúdo salvo
+- [x] Falta de botões de tamanho de fonte no editor TipTap
+
+
+## Gerenciador de Mídia (Media Manager)
+- [x] Implementar procedimento `cms.listMedia` para listar imagens do banco
+- [x] Implementar procedimento `cms.deleteMedia` para deletar imagens
+- [x] Adicionar helpers `getAllMedia()` e `deleteMedia()` em server/db.ts
+- [x] Testar funcionalidade de mídia com 6 testes vitest
+- [x] Todos os 43 testes passando (37 anteriores + 6 novos de mídia)
+- [x] MediaGallery renderiza imagens corretamente do backend

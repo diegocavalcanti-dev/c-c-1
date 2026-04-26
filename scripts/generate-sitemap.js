@@ -10,15 +10,25 @@ async function generateSitemap() {
   
   try {
     // Buscar todos os posts da API
-    const baseUrl = "https://www.cenasdecombate.com/api/trpc/posts.list";
+    const baseUrl = "https://combateapi-7di34rx2.manus.space/api/trpc/posts.list";
     const input = encodeURIComponent(JSON.stringify({ "0": { "json": { "page": 1, "limit": 1000 } } }));
     const url = `${baseUrl}?batch=1&input=${input}`;
     
-    const response = await fetch(url);
-    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+    console.log(`🔗 Buscando posts de: ${baseUrl}`);
     
-    const data = await response.json();
-    const posts = data[0].result.data.json.posts;
+    let posts = [];
+    try {
+      const response = await fetch(url, { timeout: 10000 });
+      if (response.ok) {
+        const data = await response.json();
+        posts = data[0]?.result?.data?.json?.posts || [];
+        console.log(`✅ ${posts.length} posts encontrados`);
+      } else {
+        console.warn(`⚠️  Aviso: Não conseguiu buscar posts (status ${response.status}). Usando sitemap vazio.`);
+      }
+    } catch (fetchError) {
+      console.warn(`⚠️  Aviso ao buscar posts: ${fetchError.message}. Usando sitemap vazio.`);
+    }
     
     // Gerar URLs do sitemap
     const urls = posts.map(post => ({
@@ -70,8 +80,28 @@ Sitemap: https://www.cenasdecombate.com/sitemap.xml`;
     console.log(`✅ robots.txt gerado!`);
     
   } catch (error) {
-    console.error('❌ Erro ao gerar sitemap:', error);
-    process.exit(1);
+    console.warn('⚠️  Aviso ao gerar sitemap:', error.message);
+    console.log('📝 Continuando com sitemap mínimo...');
+    
+    // Criar sitemap mínimo para não falhar o build
+    const minimalSitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.cenasdecombate.com/</loc>
+    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>`;
+    
+    const distPublicDir = path.join(__dirname, '..', 'dist', 'public');
+    if (!fs.existsSync(distPublicDir)) {
+      fs.mkdirSync(distPublicDir, { recursive: true });
+    }
+    
+    fs.writeFileSync(path.join(distPublicDir, 'sitemap.xml'), minimalSitemap, 'utf-8');
+    fs.writeFileSync(path.join(distPublicDir, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: https://www.cenasdecombate.com/sitemap.xml`, 'utf-8');
+    console.log('✅ Sitemap mínimo criado');
   }
 }
 

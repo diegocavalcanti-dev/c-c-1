@@ -17,15 +17,27 @@ import AdminMedia from "./pages/admin/AdminMedia";
 import AdminCMSPro from "./pages/admin/AdminCMSPro";
 import AdminDashboardPro from "./pages/admin/AdminDashboardPro";
 import AdminPostsListPro from "./pages/admin/AdminPostsListPro";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
+import TermsPage from "./pages/TermsPage";
+import ScrollToTop from "./components/ScrollToTop";
+// import AdPopup from "./components/AdPopup";
+
 
 function Router() {
   return (
     <>
+      <ScrollToTop />
       <Switch>
         {/* Public routes */}
         <Route path="/" component={Home} />
         <Route path="/categoria/:slug" component={ArticleList} />
         <Route path="/busca" component={SearchPage} />
+        <Route path="/politica-de-privacidade" component={PrivacyPolicy} />
+        <Route path="/sobre" component={AboutPage} />
+        <Route path="/contato" component={ContactPage} />
+        <Route path="/termos-de-uso" component={TermsPage} />
 
         {/* Admin routes - IMPORTANTE: vém antes da rota genérica */}
         <Route path="/admin" component={AdminDashboardPro} />
@@ -37,6 +49,7 @@ function Router() {
         <Route path="/admin/importar" component={AdminImport} />
         <Route path="/admin/media" component={AdminMedia} />
 
+        
         {/* Article route - genérica, deve ser a última */}
         <Route path="/:slug" component={ArticlePage} />
 
@@ -55,6 +68,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Router />
+          {/* <AdPopup /> */}
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
@@ -62,3 +76,4 @@ function App() {
 }
 
 export default App;
+
