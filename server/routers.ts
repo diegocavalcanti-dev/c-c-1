@@ -10,6 +10,7 @@ import {
   getPublishedPosts, getPostBySlug, getPostById, getPostCategories, incrementViewCount,
   createPost, updatePost, deletePost, getAllPostsAdmin, getPostStats,
   bulkInsertCategories, bulkInsertPosts, createMedia, getAllMedia, deleteMedia as deleteMediaDb,
+  getAllAuthors, getAuthorBySlug, getAuthorById, createAuthor, updateAuthor, deleteAuthor, getAuthorPosts,
 } from "./db";
 import { storagePut } from "./storage";
 import { nanoid } from "nanoid";
@@ -68,6 +69,59 @@ export const appRouter = router({
       .input(z.object({ id: z.number() }))
       .mutation(async ({ input }) => {
         await deleteCategory(input.id);
+        return { success: true };
+      }),
+  }),
+
+  // ─── Authors ───────────────────────────────────────────────────────────────
+
+  authors: router({
+    list: publicProcedure.query(async () => {
+      return getAllAuthors();
+    }),
+
+    getBySlug: publicProcedure
+      .input(z.object({ slug: z.string() }))
+      .query(async ({ input }) => {
+        const author = await getAuthorBySlug(input.slug);
+        if (!author) throw new TRPCError({ code: 'NOT_FOUND' });
+        return author;
+      }),
+
+    getById: publicProcedure
+      .input(z.object({ id: z.number() }))
+      .query(async ({ input }) => {
+        const author = await getAuthorById(input.id);
+        if (!author) throw new TRPCError({ code: 'NOT_FOUND' });
+        return author;
+      }),
+
+    getPosts: publicProcedure
+      .input(z.object({ authorId: z.number(), page: z.number().default(1), limit: z.number().default(10) }))
+      .query(async ({ input }) => {
+        const offset = (input.page - 1) * input.limit;
+        return getAuthorPosts(input.authorId, { limit: input.limit, offset });
+      }),
+
+    create: adminProcedure
+      .input(z.object({ name: z.string().min(1), slug: z.string().min(1), bio: z.string().optional(), avatar: z.string().optional() }))
+      .mutation(async ({ input }) => {
+        const id = await createAuthor(input);
+        return { success: true, id };
+      }),
+
+    update: adminProcedure
+      .input(z.object({ id: z.number(), name: z.string().optional(), slug: z.string().optional(), bio: z.string().optional(), avatar: z.string().optional() }))
+      .mutation(async ({ input }) => {
+        const { id, ...data } = input;
+        await updateAuthor(id, data);
+        return { success: true };
+      }),
+
+    delete: adminProcedure
+      .input(z.object({ id: z.number() }))
+      .mutation(async ({ input }) => {
+        await deleteAuthor(input.id);
         return { success: true };
       }),
   }),

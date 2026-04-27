@@ -238,6 +238,7 @@ export default function AdminPostEditor() {
   const [featuredImage, setFeaturedImage] = useState("");
   const [status, setStatus] = useState<PostStatus>("draft");
   const [author, setAuthor] = useState("Cenas de Combate");
+  const [authorId, setAuthorId] = useState<number | null>(null);
   const [selectedCategoryIds, setSelectedCategoryIds] = useState<number[]>([]);
   const [slugManuallyEdited, setSlugManuallyEdited] = useState(false);
   const [uploading, setUploading] = useState(false);
@@ -255,6 +256,7 @@ export default function AdminPostEditor() {
   const utils = trpc.useUtils();
 
   const { data: categories } = trpc.categories.list.useQuery();
+  const { data: authors } = trpc.authors.list.useQuery();
 
   const { data: existingPost, isLoading: loadingPost } = trpc.cms.getPost.useQuery(
     { id: postId! },
@@ -1141,10 +1143,32 @@ export default function AdminPostEditor() {
 
               <div className="space-y-2">
                 <Label htmlFor="author">Autor</Label>
+                <Select value={authorId?.toString() || ""} onValueChange={(val) => {
+                  const id = val ? parseInt(val) : null;
+                  setAuthorId(id);
+                  if (id) {
+                    const selectedAuthor = authors?.find(a => a.id === id);
+                    if (selectedAuthor) setAuthor(selectedAuthor.name);
+                  }
+                }}>
+                  <SelectTrigger className="rounded-xl">
+                    <SelectValue placeholder="Selecione um autor" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="">Padrão (Cenas de Combate)</SelectItem>
+                    {authors?.map((author) => (
+                      <SelectItem key={author.id} value={author.id.toString()}>
+                        {author.name}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                <p className="text-xs text-muted-foreground">Ou use o campo abaixo para autor customizado</p>
                 <Input
-                  id="author"
+                  id="author-custom"
                   value={author}
                   onChange={(e) => setAuthor(e.target.value)}
+                  placeholder="Autor customizado"
                   className="rounded-xl"
                 />
               </div>
