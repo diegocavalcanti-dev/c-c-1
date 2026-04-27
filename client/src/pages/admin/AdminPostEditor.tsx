@@ -1143,10 +1143,13 @@ export default function AdminPostEditor() {
 
               <div className="space-y-2">
                 <Label htmlFor="author">Autor</Label>
-                <Select value={authorId?.toString() || ""} onValueChange={(val) => {
-                  const id = val ? parseInt(val) : null;
-                  setAuthorId(id);
-                  if (id) {
+                <Select value={authorId?.toString() || "default"} onValueChange={(val) => {
+                  if (val === "default") {
+                    setAuthorId(null);
+                    setAuthor("Cenas de Combate");
+                  } else {
+                    const id = parseInt(val);
+                    setAuthorId(id);
                     const selectedAuthor = authors?.find(a => a.id === id);
                     if (selectedAuthor) setAuthor(selectedAuthor.name);
                   }
@@ -1155,7 +1158,7 @@ export default function AdminPostEditor() {
                     <SelectValue placeholder="Selecione um autor" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="">Padrão (Cenas de Combate)</SelectItem>
+                    <SelectItem value="default">Padrão (Cenas de Combate)</SelectItem>
                     {authors?.map((author) => (
                       <SelectItem key={author.id} value={author.id.toString()}>
                         {author.name}
