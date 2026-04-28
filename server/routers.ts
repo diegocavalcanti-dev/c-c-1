@@ -11,6 +11,7 @@ import {
   getAllAuthors, getAuthorBySlug, getAuthorById, createAuthor, updateAuthor, deleteAuthor, getAuthorPosts,
   updatePost, deletePost, getAllCategories, getPostById, getPostCategories, createPost,
   getPostBySlug, incrementViewCount, getPublishedPosts,
+  getCategoryBySlug, createCategory, updateCategory, deleteCategory,
 } from "./db";
 import { storagePut } from "./storage";
 import { nanoid } from "nanoid";
