@@ -9,6 +9,7 @@ import {
   getAllPostsAdmin, getPostStats,
   bulkInsertCategories, bulkInsertPosts, createMedia, getAllMedia, deleteMedia as deleteMediaDb,
   getAllAuthors, getAuthorBySlug, getAuthorById, createAuthor, updateAuthor, deleteAuthor, getAuthorPosts,
+  updatePost, deletePost, getAllCategories,
 } from "./db";
 import { storagePut } from "./storage";
 import { nanoid } from "nanoid";
