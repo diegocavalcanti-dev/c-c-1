@@ -23,15 +23,8 @@ router.get("/sitemap.xml", async (req: Request, res: Response) => {
       .where(eq(posts.status, "published"))
       .orderBy(posts.publishedAt);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     const siteUrl = (process.env.SITE_URL || "https://www.cenasdecombate.com").replace(/\/$/, "");
-=======
-    const siteUrl = process.env.SITE_URL || "https://www.cenasdecombate.com";
->>>>>>> 8afa88b (config new project)
-=======
-    const siteUrl = (process.env.SITE_URL || "https://www.cenasdecombate.com").replace(/\/$/, "");
->>>>>>> 1f31901 (config seo)
 
     // Build XML sitemap
     let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
@@ -48,15 +41,7 @@ router.get("/sitemap.xml", async (req: Request, res: Response) => {
     // Add all published posts
     for (const post of publishedPosts) {
       xml += '  <url>\n';
-<<<<<<< HEAD
-<<<<<<< HEAD
       xml += `    <loc>${siteUrl}/${post.slug}</loc>\n`;
-=======
-      xml += `    <loc>${siteUrl}/posts/${post.slug}</loc>\n`;
->>>>>>> 8afa88b (config new project)
-=======
-      xml += `    <loc>${siteUrl}/${post.slug}</loc>\n`;
->>>>>>> 1f31901 (config seo)
       if (post.updatedAt) {
         xml += `    <lastmod>${post.updatedAt.toISOString().split("T")[0]}</lastmod>\n`;
       }

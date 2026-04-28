@@ -1143,7 +1143,7 @@ export default function AdminPostEditor() {
 
               <div className="space-y-2">
                 <Label htmlFor="author">Autor</Label>
-<<<<<<< HEAD
+
                 <Select value={authorId?.toString() || "default"} onValueChange={(val) => {
                   if (val === "default") {
                     setAuthorId(null);
@@ -1173,12 +1173,11 @@ export default function AdminPostEditor() {
                   value={author}
                   onChange={(e) => setAuthor(e.target.value)}
                   placeholder="Autor customizado"
-=======
+                />
                 <Input
                   id="author"
                   value={author}
                   onChange={(e) => setAuthor(e.target.value)}
->>>>>>> 8afa88b (config new project)
                   className="rounded-xl"
                 />
               </div>
