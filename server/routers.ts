@@ -10,6 +10,7 @@ import {
   bulkInsertCategories, bulkInsertPosts, createMedia, getAllMedia, deleteMedia as deleteMediaDb,
   getAllAuthors, getAuthorBySlug, getAuthorById, createAuthor, updateAuthor, deleteAuthor, getAuthorPosts,
   updatePost, deletePost, getAllCategories, getPostById, getPostCategories, createPost,
+  getPostBySlug, incrementViewCount, getPublishedPosts,
 } from "./db";
 import { storagePut } from "./storage";
 import { nanoid } from "nanoid";
